@@ -1338,3 +1338,13 @@ main {
     color: #999999 !important;
     cursor: not-allowed;
 }
+
+@media (max-width: 1140px) {
+    .champion-stats-links {
+       margin-bottom: 40px;
+    }
+    .abilities-section {
+        padding-bottom: 300px !important;
+    }
+
+}

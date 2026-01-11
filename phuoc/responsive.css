@@ -302,6 +302,7 @@
     }
     
     .header-left {
+        max-width: 30%;
         order: 1;
         min-width: auto;
     }
