@@ -1,0 +1,669 @@
+body {
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    height: 80px;
+    box-sizing: border-box;
+    position: static;
+    background-color: rgb(0, 0, 0);
+}
+
+/*Begin Header Left */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.header-left:hover .icon-logo svg,
+.header-left:hover .logo-riot svg {
+    cursor: pointer;
+    fill: red;
+}
+
+.logo-riot svg {
+    width: 75px;
+    height: 24px;
+    fill: #f9f9f9;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 80px;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    tab-size: 4;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+}
+
+.header-container .icon-logo svg {
+    box-sizing: border-box;
+    color: rgb(85, 26, 139);
+    display : block;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    width: 20px;
+    fill: #7e7e7e;
+
+}
+/*End Header Left */
+
+
+/*Begin Header Center */
+.header-center {
+    align-items:center;
+    box-sizing:border-box;
+    color: rgb(10, 20, 40);
+    display:flex;
+    flex-basis:0%;
+    flex-grow:1;
+    flex-shrink:1;
+    font-family:"Neue Frutiger World", Tahoma, sans-serif;
+    font-size:14px;
+    font-weight:700;
+    height:78.4px;
+    justify-content:flex-start;
+    line-height:normal;
+    margin: 0 !important;
+    padding:0;
+    scroll-margin-top:80px;
+    tab-size:4;
+    text-align:left;
+    text-rendering:optimizespeed;
+    text-size-adjust:100%;
+    unicode-bidi:isolate;
+    width:809.938px;
+}
+
+.logo-center-desktop {
+    height: 80px;
+    margin-left: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-center-desktop svg {
+    box-sizing: border-box;
+    color: rgb(85, 26, 139);
+    display: block;
+    font-family:"Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 26px;
+    margin: 0;
+    min-width:38px;
+    padding: 0;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-decoration-color: rgb(0, 0, 238);
+    text-decoration-line: none;
+    text-size-adjust: 100%;
+    width:38px;
+    text-rendering: optimizeSpeed;
+    text-decoration: line;
+    text-decoration-thickness: auto;
+    text-decoration-skip-ink: auto;
+    position: relative;
+}
+.header-center-ct {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.header-center-ct a {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    margin: 7px 0;
+    z-index: 1;
+}
+.header-center-ct a p {
+    padding: 7.5px 16px;
+    margin: 0 4px 0 0;
+    color:#f9f9f9;
+    font-size:13px;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+.header-center-ct a:hover p {
+    background-color: rgba(128, 128, 128,.3);
+    border-radius: 6.4px;
+}
+
+.desktop-link-item-underline {
+    display: none;
+}
+
+
+.header-center-ct a:hover .desktop-link-item-underline {
+    display: block;
+    background-color: rgb(0, 160, 186);
+    position: absolute;
+    bottom: 7px;
+    top: 45px;
+    height: 4px;
+    width: 100% !important;
+    border-radius: 2px;
+}
+
+
+.desktop-link-item-icon-linkout {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.header-center-ct a:hover .dropdown-menu {
+    display: block;
+}
+
+/*End Header Center */
+
+/*Begin Header Right */
+.header-right {
+    display: flex;
+    align-items: center;
+}   
+
+.header-right .search-icon {
+    /* ensure a perfectly round button */
+    display:inline-grid;
+    place-items:center; 
+    height:44px;
+    width: 45px;
+    border-radius: 16px;
+    background:#1f1f1f; 
+    margin-right:10px;
+    box-sizing:border-box;
+    overflow:hidden;
+    line-height:0; 
+    cursor:pointer;
+}
+
+.header-right .search-icon svg {
+    width:18px;
+    height:18px;
+    fill:#ffffff; /* white magnifier */
+    display:block; /* avoid inline whitespace */
+}
+.header-right .header-lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    color: rgb(10, 20, 40);
+    color-scheme: light only;
+    font-family: "FF Mark W05", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 78.4px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    top: 0px;
+    unicode-bidi: isolate;
+    width: 32px;
+}
+.login-btn {
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(10, 20, 40);
+    color-scheme: light only;
+    display: flex;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 78.4px;
+    justify-content: center;
+    line-height: normal;
+    
+    /* Gộp các thuộc tính margin (top, right, bottom, left) đều là 0px */
+    margin: 0px; 
+    
+    /* Gộp các thuộc tính padding (top, right, bottom, left) đều là 0px */
+    padding: 0px; 
+    
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    width: 124.463px;
+}
+.login-btn a {
+    /* Background Properties */
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(11, 196, 226);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+
+    /* Border & Box Model */
+    /* Gộp 4 thuộc tính border-radius (đều là 12px) */
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 32px;
+    width: 112.463px;
+    display: inline-block;
+
+    /* Gộp 4 thuộc tính margin (đều là 0px) */
+    margin: 0px;
+
+    /* Gộp padding: top/bottom = 8px, left/right = 16px */
+    padding: 8px 16px;
+
+    /* Typography (Chữ) */
+    color: rgb(17, 17, 17);
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.04px;
+    line-height: 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+
+    /* Gộp các thuộc tính text-decoration */
+    text-decoration: none;
+    /* (Bao gồm: text-decoration-line: none, 
+                 text-decoration-color: rgb(17, 17, 17),
+                 text-decoration-style: solid,
+                 text-decoration-thickness: auto) */
+
+    /* Transition (Hiệu ứng) */
+    /* Gộp 4 thuộc tính transition */
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98) 0s;
+    /* (Bao gồm: transition-property: color,
+                 transition-duration: 1s,
+                 transition-timing-function: ...,
+                 transition-delay: 0s) */
+    
+    transition-behavior: normal;
+
+    /* Other Properties */
+    color-scheme: light only;
+    cursor: pointer;
+    position: relative;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    vertical-align: middle;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/*End Header Right */
+
+.sc-ct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+
+    /* Box Model */
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    min-height: auto;
+    margin: 0 auto;
+    padding: 64px 48px 64px 48px;
+
+    /* Typography */
+    color: rgb(10, 20, 40);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: normal;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+
+    /* Spacing between children */
+    gap: 16px;
+}
+
+/* sc-ct-1: "CHỌN NGAY MỘT" */
+.sc-ct-1 {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: rgb(10, 20, 40);
+    line-height: 1.5;
+    letter-spacing: 0.05em;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+.sc-ct-1 p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* sc-ct-2: "TƯỚNG" (main heading) */
+.sc-ct-2 {
+    margin: 0;
+    padding-bottom: 16px;
+}
+
+.sc-ct-2 h1 {
+    font-size: 64px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    font-style: italic;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+/* sc-ct-3: description text */
+.sc-ct-3 {
+    height: 56px;
+    width: 784px;
+    max-width: 900px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #374151;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.sc-ct-3 p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+/* Cham */
+/* Thiết lập cho toàn bộ khu vực (tùy chọn) */
+.champions-section {
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+/* 1. Thiết lập cho CHA CỦA CÁC HÀNG (.champions-grid) */
+.champions-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Mỗi hàng là một cột duy nhất */
+    
+    /* 'gap' ở đây sẽ tạo KHOẢNG CÁCH DỌC (1rem) giữa .row-1 và .row-2, v.v. */
+    gap: 1rem; 
+}
+
+/* 2. Thiết lập cho TỪNG HÀNG (.row-1, .row-2, ...) */
+/* Chúng ta phải áp dụng kiểu này cho TẤT CẢ các lớp hàng của bạn.
+  Nếu bạn có .row-5, .row-6, bạn phải thêm chúng vào đây.
+*/
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+    display: grid;
+    /* Tạo 4 cột cho mỗi hàng */
+    grid-template-columns: repeat(4, 1fr);
+    
+    /* 'gap' ở đây sẽ tạo KHOẢNG CÁCH NGANG (1rem) giữa các thẻ */
+    gap: 0,5rem;
+}
+
+/* 3. Thiết lập cho từng THẺ (Card) - Giống như trước */
+.champion-card {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    overflow: hidden;
+    aspect-ratio: 3 / 4; /* Giữ tỉ lệ khung hình */
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+/* 4. Thiết lập cho ẢNH bên trong thẻ - Giống như trước */
+.champion-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đây là chìa khóa để ảnh tự cắt vừa vặn */
+    display: block;
+    transition: transform 0.3s ease; /* Thêm hiệu ứng hover */
+}
+
+/* 5. Thiết lập cho TÊN TƯỚNG - Giống như trước */
+.champion-card .champion-name {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    height: 60px;
+    width: 100%;
+    font-size: 20px !important;
+    font-style: italic !important;
+    background-color: rgb(10,10,40);
+    color: rgb(255, 255, 255);
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* (Tùy chọn) Hiệu ứng hover */
+.champion-card:hover img {
+    transform: scale(1.15);
+}
+.champion-card:hover .champion-name {
+    background-color: rgb(64,70,82);
+}
+
+
+/* Footer */
+.main-footer-container {
+    background-color: rgb(17, 17, 17);
+    color: #a0a0a0;
+    padding-top: 0 !important;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.footer-nav-top {
+    padding: 24px 0;
+    background-color: rgb(41,41,41);
+    width: 100%;
+    height: 30.95px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    SCROLL-MARGIN-TOP: 80px;
+}
+
+.footer-nav-top ul,
+.footer-nav-bottom ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px 30px;
+}
+
+.footer-nav-top ul li a,
+.footer-nav-bottom ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.footer-nav-top ul li a:hover,
+.footer-nav-bottom ul li a:hover {
+    color: #c4c4c4;
+}
+
+.footer-social-links {
+    margin-top: 18px;
+    margin-bottom: 42px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-social-links a {
+    background-color: rgb(41,41,41);
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social-links a:hover {
+    color: #fff;
+}
+
+.footer-social-links svg {
+    width: 16px;
+    height: 16px;
+    fill: #fdfefe;
+   
+}
+
+.footer-logos {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-logos .riot-logo-footer svg {
+    height: 30px;
+    width: auto;
+    fill: #777;
+}
+
+.footer-logos .vng-logo-footer {
+    font-size: 28px;
+    font-weight: 800;
+    color: #777;
+    letter-spacing: -1px;
+    font-style: italic;
+    /* Placeholder đơn giản cho logo VNG Games */
+    font-family: 'Inter', sans-serif; 
+}
+
+.footer-copyright {
+    font-size: 13px;
+    font-weight: 500;
+    width: 640px;
+    height: 36px;
+    margin: 20px auto 30px auto;
+    line-height: 18.2px;
+    color: rgb(126,126,126);
+}
+
+.footer-nav-bottom {
+    margin-bottom: 30px;
+}
+
+.footer-age-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 2px solid #555;
+    background-color: #000;
+    padding: 15px 20px;
+    width: 280px;
+    border-radius: 4px;
+}
+
+.footer-rating {
+    background-color: #313131; 
+    border-radius: 8px;
+    padding: 12px;
+    display: inline-block;
+}
+.rating-logo img {
+    display: block;
+    height: auto; 
+    max-width: 100%;
+}

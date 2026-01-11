@@ -1,0 +1,693 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aatrox</title>   
+    <link rel="stylesheet" href="./phuoc/style-champions.css">
+    <link rel="stylesheet" href="./phuoc/responsive.css">
+</head>
+<body>
+    <header class ="header-container">
+        <div class="header-left">
+            <a href="#" class="logo-riot">
+                <svg width = "85" height = "27" viewBox="0 0 587.93 165">
+                    <path d="M98.77.33 0 46.07l24.61 93.66 18.73-2.3-5.15-58.89 6.15-2.74L54.96 136l32.01-3.93-5.69-65 6.09-2.71 11.68 66.23 32.38-3.98-6.23-71.25 6.16-2.74 12.77 72.43 32.01-3.93V19.71L98.77.33zm2.32 142.05 1.63 9.22 73.42 12.24v-30.68l-75.01 9.22h-.04zm144.49-19.22v12.63h15.57a14.84 14.84 0 0 1-1.92 7.31 13 13 0 0 1-5.6 5.11 20 20 0 0 1-8.9 1.8 17.53 17.53 0 0 1-10-2.8 17.87 17.87 0 0 1-6.44-8.14 33.06 33.06 0 0 1-2.27-12.93 31.81 31.81 0 0 1 2.32-12.81 18.14 18.14 0 0 1 6.5-8 17.27 17.27 0 0 1 9.82-2.78 19.31 19.31 0 0 1 5.36.71 14.15 14.15 0 0 1 4.33 2.09 12.92 12.92 0 0 1 3.18 3.29 15.61 15.61 0 0 1 2 4.44h17.27a27.22 27.22 0 0 0-3.46-10.28 28.84 28.84 0 0 0-7.05-8.1 32.6 32.6 0 0 0-9.91-5.29 37.91 37.91 0 0 0-12.06-1.86 37.32 37.32 0 0 0-14 2.6 32.6 32.6 0 0 0-11.36 7.61 35 35 0 0 0-7.61 12.21 46.15 46.15 0 0 0-2.73 16.44q0 11.94 4.54 20.59a32.4 32.4 0 0 0 12.69 13.27 39.84 39.84 0 0 0 35.84.84 28.39 28.39 0 0 0 11.67-11q4.25-7.19 4.24-17.2v-9.76Zm215.03 40.81V88.53h51.67v13.96h-34.62v16.76h27.99v13.96h-27.99v16.8h34.7v13.96h-51.75zm101.83-53.3a9 9 0 0 0-3.54-6.64c-2.09-1.59-5-2.38-8.69-2.38a16.63 16.63 0 0 0-6.26 1 8.62 8.62 0 0 0-3.83 2.78 6.74 6.74 0 0 0-1.33 4 6.2 6.2 0 0 0 .79 3.29 7.27 7.27 0 0 0 2.4 2.45 16.54 16.54 0 0 0 3.7 1.79 40.14 40.14 0 0 0 4.64 1.31l6.63 1.54a47.19 47.19 0 0 1 9.45 3.08 27.46 27.46 0 0 1 7.2 4.68 18.84 18.84 0 0 1 4.58 6.39 20.37 20.37 0 0 1 1.61 8.29 20.65 20.65 0 0 1-3.54 12.11 22.56 22.56 0 0 1-10.15 7.85 41.31 41.31 0 0 1-15.93 2.76 42.69 42.69 0 0 1-16.17-2.81 23.22 23.22 0 0 1-10.72-8.48q-3.83-5.66-4-14.12h16.43a10.68 10.68 0 0 0 7.05 9.94 19.37 19.37 0 0 0 7.24 1.26 18.44 18.44 0 0 0 6.66-1.09 10 10 0 0 0 4.33-3 7.22 7.22 0 0 0 1.57-4.48 6.16 6.16 0 0 0-1.42-4 10.86 10.86 0 0 0-4.14-2.81 42.07 42.07 0 0 0-6.89-2.14l-8.07-1.95q-9.65-2.3-15.23-7.26t-5.54-13.44a19.86 19.86 0 0 1 3.72-12.12 24.74 24.74 0 0 1 10.33-8.11 36.74 36.74 0 0 1 15-2.91 35.62 35.62 0 0 1 14.92 2.91 23.43 23.43 0 0 1 9.91 8.14 21.54 21.54 0 0 1 3.6 12.12Zm-113.99 53.3h-16.87v-57.35l-1.73-.02-17.04 57.37h-16.86l-16.58-57.37-2.15.02v57.35h-16.87V88.53h28.67l14.48 50.56h1.75l14.48-50.56h28.72v75.44zm-114.66 0h18.27l-25.33-75.43h-23.15l-25.37 75.43h18.3l4.93-16.54h27.42Zm-28.43-29.7 8.22-27.65h3.1l8.26 27.65Zm278.58-37.76a4 4 0 0 1-3.67-2.44 4 4 0 0 1 0-3.1 4 4 0 0 1 .85-1.27 4.25 4.25 0 0 1 1.27-.86 4.15 4.15 0 0 1 3.1 0 4.13 4.13 0 0 1 1.27.86 4.08 4.08 0 0 1 .86 1.27 4 4 0 0 1 0 3.1 4.08 4.08 0 0 1-.86 1.27 4 4 0 0 1-1.27.86 4 4 0 0 1-1.55.31Zm0-1.09a2.84 2.84 0 0 0 1.47-.39 2.94 2.94 0 0 0 1.05-1 2.93 2.93 0 0 0 0-2.92 3 3 0 0 0-1.06-1 2.93 2.93 0 0 0-2.92 0 3 3 0 0 0-1 1 2.86 2.86 0 0 0 0 2.92 3 3 0 0 0 1 1 2.83 2.83 0 0 0 1.46.39Zm-1.46-1.15V90.6h1.78a1.52 1.52 0 0 1 .69.15 1.13 1.13 0 0 1 .47.42 1.24 1.24 0 0 1 .17.66 1.16 1.16 0 0 1-.18.66 1 1 0 0 1-.48.41 1.56 1.56 0 0 1-.7.14h-1.2v-.72h1a.52.52 0 0 0 .36-.12.5.5 0 0 0 .14-.37.47.47 0 0 0-.14-.37.52.52 0 0 0-.36-.12h-.55v2.93Zm2.39-1.68.82 1.68h-1.11l-.75-1.68ZM282.41 1.03h17.05v75.44h-17.05zm98.02 37.72q0 12.42-4.71 21a32.67 32.67 0 0 1-12.79 13.17 38.57 38.57 0 0 1-36.31 0 32.75 32.75 0 0 1-12.79-13.2q-4.71-8.66-4.71-21t4.71-21.05a32.67 32.67 0 0 1 12.75-13.14 38.65 38.65 0 0 1 36.31 0 32.67 32.67 0 0 1 12.79 13.17q4.71 8.64 4.71 21.05m-17.35 0a33.35 33.35 0 0 0-2.23-13 17.47 17.47 0 0 0-6.33-8 18.57 18.57 0 0 0-19.45 0 17.57 17.57 0 0 0-6.35 8 38.59 38.59 0 0 0 0 26 17.49 17.49 0 0 0 6.35 8 18.57 18.57 0 0 0 19.45 0 17.39 17.39 0 0 0 6.33-8 33.4 33.4 0 0 0 2.23-13M246.58 50.17l8.76 26.3h18.71l-9.74-28.33h-13.23l-.79-2.44c2.52-.49 6.83-1.25 10.65-3.85a20 20 0 0 0 8.75-16.39 24.15 24.15 0 0 0-3.26-12.75 21.9 21.9 0 0 0-9.36-8.64 32.56 32.56 0 0 0-14.64-3H212v75.4h17.06v-26.3Zm-.32-15.61a19.35 19.35 0 0 1-7.26 1.18h-9.94V14.88h9.91a18.68 18.68 0 0 1 7.25 1.24 9.12 9.12 0 0 1 4.4 3.7 10 10 0 0 1 1.5 5.64 9.65 9.65 0 0 1-1.48 5.55 8.86 8.86 0 0 1-4.38 3.55M382.04 1.03v14h29.3l.8 2.45c-2.48.48-6.67 1.22-10.43 3.7v55.31h16.87v-61.5h19.62v-14Z"></path>
+                </svg>
+            </a>
+            <div class="icon-logo">
+                <svg viewBox="0 0 8 5">
+                    <path d="m.707 1.707 2.586 2.586a1 1 0 0 0 1.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707Z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="header-center">
+            <div class="logo-center-desktop">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="38" height="26" viewBox="0 0 30 32" fill="none" class="league">
+                        <g>
+                            <path d="M1.80644 9.75049C0.655032 11.8373 0 14.2271 0 16.7683C0 19.3095 0.655032 21.7015 1.80644 23.7883V9.75049Z" fill="#C28F2C"></path> 
+                            <path d="M15 2.02222C13.7829 2.02222 12.602 2.16921 11.4688 2.43647V4.75718C12.5907 4.44093 13.7738 4.26721 15 4.26721C22.0218 4.26721 27.7153 9.84627 27.7153 16.7305C27.7153 19.8307 26.5571 22.6659 24.6464 24.8463L24.2838 26.118L23.4814 28.9331C27.4184 26.2761 30.0023 21.8195 30.0023 16.7705C30 8.62355 23.2843 2.02222 15 2.02222Z" fill="#C28F2C"></path> 
+                            <path d="M11.4688 24.4209H22.9737H23.2253C25.1723 22.4209 26.3713 19.7126 26.3713 16.7305C26.3713 10.5746 21.2806 5.58569 15 5.58569C13.767 5.58569 12.5816 5.78168 11.4688 6.1358V24.4209Z" fill="#C28F2C"></path>
+                            <path d="M10.1088 0H1.55029L3.16634 3.29844V28.7038L1.55029 32H21.1922L22.9737 25.7572H10.1088V0Z" fill="#C28F2C"></path>
+                        </g>
+                    </svg>
+                </a>
+            </div>
+            <!-- <div class=""></div>logo-center-mobile -->
+            <div class="header-center-ct">
+                <a href="#">
+                    <p>Trò chơi</p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1" style="background-color: rgb(0, 160, 186); position: absolute; bottom: 7px; height: 4px; width: 104.69px; border-radius: 2px;"></div>
+                </a>
+                    
+                <a href="#">
+                    <p>Tướng</p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1" style="background-color: rgb(0, 160, 186); position: absolute; bottom: 7px; height: 4px; width: 104.69px; border-radius: 2px;"></div>
+                </a>
+                <a class = "dropdown-toggle" href="#">
+                    <p>Tin tức
+                        <svg width="10" height="5" class="Keqbnicv6fO1CTrVF-g5Rg== Z-Mbz2de33EBshUmlYmWVQ==" viewBox="0 0 8 5"><title>mainNavArrowDown</title><path d="m.707 1.707 2.586 2.586a1 1 0 0 0 1.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707Z" fill="#7E7E7E"></path></svg>
+                    </p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1"></div>
+                    <div class="dropdown-menu">
+                        <a href="#">Tất cả</a>
+                        <a href="#">Cập nhật trò chơi</a>
+                        <a href="#">Esports</a>
+                        <a href="#">Đội ngũ phát triển</a>
+                        <a href="#">Truyền thông</a>
+                        <a href="#">Cộng đồng</a>
+                        <a href="#">Riot Games</a>
+                    </div>
+                </a>
+                <a href="#">
+                    <p>Chi tiết cập nhật</p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1" style="background-color: rgb(0, 160, 186); position: absolute; bottom: 7px; height: 4px; width: 104.69px; border-radius: 2px;"></div>    
+                </a>
+                <a href="#">
+                    <p>Esports
+                        <span class="desktop-link-item-icon-linkout"><svg width="14" height="14" viewBox="0 0 16 16"><title>mainNavLinkOut</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 0 0-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158Z" fill="#737373"></path></svg></span>
+                    </p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1" style="background-color: rgb(0, 160, 186); position: absolute; bottom: 7px; height: 4px; width: 104.69px; border-radius: 2px;"></div>
+                </a>
+                <a href="#">
+                    <p>Vũ trụ
+                        <span class="desktop-link-item-icon-linkout"><svg width="14" height="14" viewBox="0 0 16 16"><title>mainNavLinkOut</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 0 0-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158Z" fill="#737373"></path></svg></span>
+                    </p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1" style="background-color: rgb(0, 160, 186); position: absolute; bottom: 7px; height: 4px; width: 104.69px; border-radius: 2px;"></div>
+                </a>
+                <a href="#">
+                    <p>Hỗ trợ
+                        <span class="desktop-link-item-icon-linkout"><svg width="14" height="14" viewBox="0 0 16 16"><title>mainNavLinkOut</title><path fill-rule="evenodd" clip-rule="evenodd" d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 0 0-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158Z" fill="#737373"></path></svg></span>
+                    </p>
+                    <div class="desktop-link-item-underline" bis_skin_checked="1" style="background-color: rgb(0, 160, 186); position: absolute; bottom: 7px; height: 4px; width: 104.69px; border-radius: 2px;"></div>
+                </a>
+            </div>
+
+
+
+        </div>
+
+        <div class="header-right">
+            <div class="search-icon">
+                <svg viewBox="0 0 19 20"><path fill-rule="evenodd" clip-rule="evenodd" d="M19 18.6l-5.2-5.2C15.2 12 16 10.1 16 8c0-4.4-3.6-8-8-8S0 3.6 0 8s3.6 8 8 8c1.6 0 3.1-.5 4.3-1.3l5.3 5.3 1.4-1.4zM2 8c0-3.3 2.7-6 6-6 1.6 0 3.1.6 4.2 1.8C13.4 4.9 14 6.4 14 8s-.6 3.1-1.8 4.2C11.1 13.4 9.6 14 8 14c-3.3 0-6-2.7-6-6z"></path></svg>
+            </div>
+            <div class="header-lg">
+                <svg width="16" height="16" viewBox="0 0 16 16"><title>globeIcon</title><path d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z" fill="#E8E8E8"></path></svg>
+            </div>
+            <div class="login-btn">
+                <a data-riotbar-link-id="signup" data-testid="riotbar:account:button-signup" class="EXXIh+UJ3EHsngn67GsYrA== riotbar-anonymous-link _076C3ug55io8JCnpiKFW2g== riotbar-account-action _77bma8MO+6GFQIX-G4Sndg== theme-button" style="background: rgb(11, 196, 226);">CHƠI NGAY</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="content-container">
+        <div class="content-1">
+            <h1 class="darkin-title">QUỶ KIẾM DARKIN</h1>
+            <h2 class="champion-name">AATROX</h2>
+            
+            <p class="champion-description">Từng là những người bảo hộ cao quý của Shurima để chống lại Hư Không, Aatrox cùng đồng bọn cuối cùng lại trở thành một mối hiểm họa còn lớn hơn đối với cả Runeterra, và chỉ bị đánh bại bằng món phép thuật khôn ngoan của nhân loại. Nhưng sau nhiều thế kỉ bị giam cầm, Aatrox là kẻ đầu tiên một lần nữa tìm về với tự do, bằng cách vấy bẩn và biến đổi những kẻ ngu ngốc dám cầm thử thứ vũ khí ma thuật chứa đựng linh hồn hắn. Giờ đây, với da thịt chiếm đoạt được, hắn quay trở lại Runeterra trong một hình hài khủng khiếp tương tự trước đây, tìm kiếm sự tàn sát và trả món hận thù năm xưa.</p>
+            
+            <div class="stats-container">
+                <div class="stat-item-border"> 
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.7109 18.0316V19.7916C24.4693 17.0332 26.3093 19.7916 26.3093 19.7916C35.8869 13.0492 28.9141 0.639648 28.9141 0.639648C28.9141 0.639648 28.6837 6.15645 24.0885 9.52605V14.8124C24.0117 16.3452 22.8597 17.3404 21.7109 18.0316Z" fill="currentColor"/>
+                                <path d="M5.69295 19.869C5.69295 19.869 6.99535 17.8018 9.14255 19.0274L6.69135 15.4242L8.83535 10.3042C3.31855 6.93136 3.07535 0.726562 3.07535 0.726562C3.07535 0.726562 -3.88465 13.1202 5.69295 19.869Z" fill="currentColor"/>
+                                <path d="M8.60542 26.8451L10.3686 20.8675L10.2918 20.7139L6.15422 24.9283C5.15725 25.939 3.81841 26.5405 2.40062 26.6147H0.960625L0.640625 27.3795L4.48062 31.0595L8.60542 26.8451Z" fill="currentColor"/>
+                                <path d="M29.526 26.8446C28.818 26.8343 28.1195 26.6794 27.4735 26.3894C26.8274 26.0994 26.2475 25.6804 25.7692 25.1582L22.0156 21.4014L23.2412 27.0718L27.4556 31.3598L31.2956 27.683L30.9756 26.915L29.526 26.8446Z" fill="currentColor"/>
+                                <path d="M17.881 13.6645C17.881 13.7413 17.8042 13.8181 17.8042 13.8917H18.0346C19.8746 14.0453 20.4858 14.7365 20.9466 16.3461C21.2336 16.1848 21.492 15.9772 21.7114 15.7317C22.0314 15.4117 22.249 15.1973 22.249 14.8901V8.98929C22.245 8.8403 22.189 8.6974 22.0909 8.58524C21.9928 8.47307 21.8585 8.39868 21.7114 8.37489L11.673 6.53809H11.5226C11.3198 6.53809 11.1252 6.61866 10.9818 6.76209C10.8384 6.90552 10.7578 7.10005 10.7578 7.30289V9.45009L18.7258 10.5221L17.881 13.6645Z" fill="currentColor"/>
+                                <path d="M19.2552 17.2802C18.8712 15.5938 18.7944 15.8242 17.4152 15.7474L13.0472 15.3602V14.1218H14.8104C15.1093 14.1287 15.4014 14.033 15.6384 13.8508C15.8753 13.6686 16.0427 13.4108 16.1128 13.1202L16.4328 12.0482L10.3656 11.2002L8.76562 15.1106L12.5224 20.5506L10.7496 26.461L15.9592 31.3602L21.2488 26.5378C21.2488 26.5378 19.2552 17.4178 19.2552 17.2578" fill="currentColor"/>
+                                <path d="M15.9625 0.713867L14.4297 4.00667L15.9625 5.23227L17.4953 4.00667L15.9625 0.713867Z" fill="currentColor"/>
+                                <path d="M19.875 3.01113L20.3326 4.93113H22.2526L23.171 1.41113L19.875 3.01113Z" fill="currentColor"/>
+                                <path d="M9.68083 4.92793H11.6008L11.6776 4.69753L12.0616 3.01113L8.76562 1.41113L9.68083 4.92793Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <div class="stat-text">
+                            <div class="stat-label">VAI TRÒ</div>
+                            <div class="stat-value">ĐẤU SĨ</div>
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="stat-item-border">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <svg width="48" height="32" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.6667 20.3333H0L7.33333 11H20L12.6667 20.3333Z" fill="currentColor"/>
+                                <path d="M26.6667 20.3333H14L21.3333 11H34L26.6667 20.3333Z" fill="currentColor"/>
+                                <path d="M40.6667 20.3333H28L35.3333 11H48L40.6667 20.3333Z" fill="currentColor" fill-opacity="0.2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-text">
+                            <div class="stat-label">ĐỘ KHÓ</div>
+                            <div class="stat-value">TRUNG BÌNH</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="champion-stats-links">
+                <p>THÔNG THẠO TƯỚNG</p>
+                <a href="#">OP.GG</a>
+                <a href="#">U.GG</a>
+                <a href="#">PROBUILD STATS</a>
+                <a href="#">PROBUILDS.NET</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="abilities-section">
+        <div class="abilities-content">
+            <h3 class="abilities-title">KỸ NĂNG</h3>
+            
+            <div class="abilities-list">
+                <div class="ability-item active"> 
+                    <img src="./phuoc/img/aatrox/Aatrox_Passive.png" alt="Đường Kiếm Tuyệt Diệt">
+                    <p>ĐƯỜNG KIẾM TUYỆT DIỆT</p>
+                </div>
+                
+                <div class="ability-item">
+                    <img src="./phuoc/img/aatrox/AatroxQ.png" alt="Quỷ Kiếm Darkin">
+                    <p>QUỶ KIẾM DARKIN</p>
+                </div>
+                
+                <div class="ability-item">
+                    <img src="./phuoc/img/aatrox/AatroxW.png" alt="Xiềng Xích Địa Ngục">
+                    <p>XIỀNG XÍCH ĐỊA NGỤC</p>
+                </div>
+                
+                <div class="ability-item">
+                    <img src="./phuoc/img/aatrox/AatroxE.png" alt="Bộ Pháp Hắc Ám">
+                    <p>BỘ PHÁP HẮC ÁM</p>
+                </div>
+                
+                <div class="ability-item">
+                    <img src="./phuoc/img/aatrox/AatroxR.png" alt="Chiến Binh Tận Thế">
+                    <p>CHIẾN BINH TẬN THẾ</p>
+                </div>
+            </div>
+            
+            <div class="ability-nav-bar">
+                <div class="divider">
+                    <div class="divider-fill"></div>
+                </div>
+                <div class="nav-controls">
+                    <span class="ability-nav-btn prev">
+                        <svg height="32" width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1285 14.9997L15.421 10.7072L14.0068 9.29297L7.30007 15.9997L14.0068 22.7064L15.421 21.2922L11.1285 16.9997H23V14.9997H11.1285Z" fill="currentcolor"/>
+                        </svg>
+                    </span>
+                    <span class="ability-nav-btn next">
+                        <svg height="32" width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8714 14.9997L16.5786 10.7072L17.9928 9.29297L24.6999 15.9997L17.9928 22.7069L16.5786 21.2926L20.8715 16.9997H9V14.9997H20.8714Z" fill="currentcolor"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ability-details">
+            <div class="ability-detail-content active" data-ability="passive">
+                <div class="ability-media-placeholder">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="./phuoc/video/noitai.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="ability-description-wrapper">
+                    <h4 class="ability-name">ĐƯỜNG KIẾM TUYỆT DIỆT</h4>
+                    <div class="ability-type">NỘI TẠI</div> 
+                    <p class="champion-description">Thường kỳ, đòn đánh kế tiếp của Aatrox sẽ gây thêm sát thương vật lý và hồi máu, dựa trên máu tối đa của mục tiêu.</p>
+                </div>
+            </div>
+
+            <div class="ability-detail-content" data-ability="q">
+                <div class="ability-media-placeholder">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="./phuoc/video/chieuq.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="ability-description-wrapper">
+                    <h4 class="ability-name">QUỶ KIẾM DARKIN</h4>
+                    <div class="ability-type">Q</div> 
+                    <p class="champion-description">Aatrox đập kiếm xuống đất, gây sát thương vật lý. Có thể chém ba lần, mỗi lần có một diện tác dụng khác nhau.</p>
+                </div>
+            </div>
+
+            <div class="ability-detail-content" data-ability="w">
+                <div class="ability-media-placeholder">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="./phuoc/video/chieuw.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="ability-description-wrapper">
+                    <h4 class="ability-name">XIỀNG XÍCH ĐỊA NGỤC</h4>
+                    <div class="ability-type">W</div> 
+                    <p class="champion-description">Aatrox đập kiếm xuống đất, gây sát thương lên kẻ địch đầu tiên trúng phải. Tướng và quái to phải nhanh rời vùng tác động nếu không muốn bị kéo về tâm và chịu sát thương lần nữa.</p>
+                </div>
+            </div>
+            
+            <div class="ability-detail-content" data-ability="e">
+                <div class="ability-media-placeholder">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="./phuoc/video/chieue.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="ability-description-wrapper">
+                    <h4 class="ability-name">BỘ PHÁP HẮC ÁM</h4>
+                    <div class="ability-type">E</div> 
+                    <p class="champion-description">Nội tại giúp Aatrox hồi máu khi gây sát thương lên tướng. Kích hoạt giúp Aatrox lướt theo hướng chỉ định.</p>
+                </div>    
+            </div>
+            
+            <div class="ability-detail-content" data-ability="r">
+                <div class="ability-media-placeholder">
+                    <video width="100%" height="100%" autoplay loop muted playsinline>
+                        <source src="./phuoc/video/chieur.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="ability-description-wrapper">
+                    <h4 class="ability-name">CHIẾN BINH TẬN THẾ</h4>
+                    <div class="ability-type">R</div> 
+                    <p class="champion-description">Aatrox hóa quỷ, làm hoảng sợ lính địch gần đó và được cộng SMCK, tăng hồi máu cũng như Tốc độ Di chuyển. Nếu hắn tham gia hạ gục, hiệu ứng này được kéo dài.</p>
+                </div>
+            </div>
+
+        </div>
+        
+    </section>
+
+
+    <section class="skins-section">
+        <h3 class="skins-title">TRANG PHỤC HIỆN CÓ</h3>
+
+        <div class="main-splash-art">
+            <img src="./phuoc/img/aatrox/Aatrox_0.jpg" alt="Aatrox - Splash Art" data-skin-id="skin-0">
+        </div>
+
+        <div class="skin-gallery">
+            <div class="skin-thumbnails-wrapper">
+                <div class="skin-thumbnails-list">
+                    
+                    <div class="skin-item active" data-skin-id="skin-0">
+                        <img src="./phuoc/img/aatrox/Aatrox_0.jpg" alt="Aatrox Default">
+                        <p>AATROX</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-1">
+                        <img src="./phuoc/img/aatrox/Aatrox_1.jpg" alt="Aatrox Công Lý">
+                        <p>AATROX CÔNG LÝ</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-2">
+                        <img src="./phuoc/img/aatrox/Aatrox_2.jpg" alt="Aatrox Máy Móc">
+                        <p>AATROX MÁY MÓC</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-3">
+                        <img src="./phuoc/img/aatrox/Aatrox_3.jpg" alt="Aatrox Thợ Săn Đại Dương">
+                        <p>AATROX THỢ SĂN ĐẠI DƯƠNG</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-4">
+                        <img src="./phuoc/img/aatrox/Aatrox_7.jpg" alt="Aatrox Huyết Nguyệt">
+                        <p>AATROX HUYẾT NGUYỆT</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-5">
+                        <img src="./phuoc/img/aatrox/Aatrox_8.jpg" alt="Aatrox Huyết Nguyệt - Hàng Hiệu">
+                        <p>AATROX HUYẾT NGUYỆT - HÀNG HIỆU</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-6">
+                        <img src="./phuoc/img/aatrox/Aatrox_9.jpg" alt="Aatrox Vinh Quang">
+                        <p>AATROX VINH QUANG</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-7">
+                        <img src="./phuoc/img/aatrox/Aatrox_11.jpg" alt="Aatrox Thợ Săn Huyết Nguyệt">
+                        <p>AATROX THỢ SĂN HUYẾT NGUYỆT</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-8">
+                        <img src="./phuoc/img/aatrox/Aatrox_20.jpg" alt="Aatrox Nguyệt Thực">
+                        <p>AATROX NGUYỆT THỰC</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-9">
+                        <img src="./phuoc/img/aatrox/Aatrox_21.jpg" alt="Aatrox Ác Ma Không Gian">
+                        <p>AATROX ÁC MA KHÔNG GIAN</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-10">
+                        <img src="./phuoc/img/aatrox/Aatrox_30.jpg" alt="DRX Aatrox">
+                        <p>DRX AATROX</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-11">
+                        <img src="./phuoc/img/aatrox/Aatrox_31.jpg" alt="DRX Aatrox - Hàng Hiệu">
+                        <p>DRX AATROX - HÀNG HIỆU</p>
+                    </div>
+                    <div class="skin-item" data-skin-id="skin-12">
+                        <img src="./phuoc/img/aatrox/Aatrox_33.jpg" alt="Aatrox Rực Lửa">
+                        <p>AATROX RỰC LỬA</p>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="skin-nav-bar">
+                <div class="skin-divider">
+                    <div class="skin-divider-fill"></div>
+                </div>
+                <div class="skin-nav-controls">
+                    <span class="skin-nav-btn prev">
+                        <svg height="32" width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1285 14.9997L15.421 10.7072L14.0068 9.29297L7.30007 15.9997L14.0068 22.7064L15.421 21.2922L11.1285 16.9997H23V14.9997H11.1285Z" fill="currentcolor"/>
+                        </svg>
+                    </span>
+                    <span class="skin-nav-btn next">
+                        <svg height="32" width="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8714 14.9997L16.5786 10.7072L17.9928 9.29297L24.6999 15.9997L17.9928 22.7069L16.5786 21.2926L20.8715 16.9997H9V14.9997H20.8714Z" fill="currentcolor"/>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    <footer class="main-footer-container">
+        <div class="footer-content">
+            <nav class="footer-nav-top">
+                <ul>
+                    <li><a href="#">Về Liên Minh Huyền Thoại</a></li>
+                    <li><a href="#">Hỗ Trợ</a></li>
+                    <li><a href="#">Trang Esports Chính</a></li>
+                </ul>
+            </nav>
+    
+            <div class="footer-social-links">
+                <a href="#" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2.04 6.5 2.04 12c0 4.97 3.66 9.13 8.44 9.87v-7H7.7V12h2.78V9.6c0-2.75 1.65-4.24 4.12-4.24 1.18 0 2.22.09 2.52.13v2.45h-1.44c-1.33 0-1.59.63-1.59 1.56V12h2.7l-.35 2.87h-2.35v7c4.78-.74 8.44-4.9 8.44-9.87C21.96 6.5 17.5 2.04 12 2.04Z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2c-2.72 0-3.06.01-4.12.06-1.06.05-1.79.22-2.42.47-.65.25-1.23.58-1.77 1.14-.56.54-.89 1.12-1.14 1.77-.25.63-.42 1.36-.47 2.42C2.01 8.94 2 9.28 2 12s.01 3.06.06 4.12c.05 1.06.22 1.79.47 2.42.25.65.58 1.23 1.14 1.77.54.56 1.12.89 1.77 1.14.63.25 1.36.42 2.42.47 1.06.05 1.4.06 4.12.06s3.06-.01 4.12-.06c1.06-.05 1.79-.22 2.42-.47.65-.25 1.23-.58 1.77-1.14.56-.54.89-1.12 1.14-1.77.25-.63.42-1.36.47-2.42.05-1.06.06-1.4.06-4.12s-.01-3.06-.06-4.12c-.05-1.06-.22-1.79-.47-2.42-.25-.65-.58-1.23-1.77-1.14-.54-.56-1.12-.89-1.77-1.14-.63-.25-1.36-.42-2.42-.47C15.06 2.01 14.72 2 12 2zm0 1.8c2.67 0 2.98.01 4.03.06 1.03.05 1.5.2 1.8.34.42.17.7.35.98.63.28.28.46.56.63.98.14.3.29.77.34 1.8.05 1.05.06 1.36.06 4.03s-.01 2.98-.06 4.03c-.05 1.03-.2 1.5-.34 1.8-.17.42-.35.7-.63.98-.28.28-.56.46-.98.63-.3.14-.77.29-1.8.34-1.05.05-1.36.06-4.03.06s-2.98-.01-4.03-.06c-1.03-.05-1.5-.2-1.8-.34-.42-.17-.7-.35-.98-.63-.28-.28-.46-.56-.63.98-.14-.3-.29-.77-.34-1.8-.05-1.05-.06-1.36-.06-4.03s.01-2.98.06-4.03c.05-1.03.2-1.5.34-1.8.17-.42.35-.7.63-.98.28-.28.56.46.98-.63.3-.14.77.29 1.8-.34C9.02 3.81 9.33 3.8 12 3.8zm0 3.1a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2zm0 8.4a3.3 3.3 0 1 1 0-6.6 3.3 3.3 0 0 1 0 6.6zm6.3-8.8a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21.58 7.19c-.22-1.2-1.17-2.15-2.37-2.37C17.47 4.5 12 4.5 12 4.5s-5.47 0-7.21.32c-1.2.22-2.15 1.17-2.37 2.37C2.1 8.93 2.1 12 2.1 12s0 3.07.32 4.81c.22 1.2 1.17 2.15 2.37 2.37C6.53 19.5 12 19.5 12 19.5s5.47 0 7.21-.32c1.2-.22 2.15-1.17 2.37-2.37.32-1.74.32-4.81.32-4.81s0-3.07-.32-4.81zM9.9 14.7V9.3l4.58 2.7L9.9 14.7z"/></svg>
+                </a>
+            </div>
+    
+            <div class="footer-logos">
+                <div class="riot-logo-footer">
+                    <!-- Sử dụng lại SVG logo Riot từ header -->
+                    <svg width="75" height="20" viewBox="0 0 500 200" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M 98.77 0.33 L 0 46.07 l 24.61 93.66 l 18.73 -2.3 l -5.15 -58.89 l 6.15 -2.74 L 54.96 136 l 32.01 -3.93 l -5.69 -65 l 6.09 -2.71 l 11.68 66.23 l 32.38 -3.98 l -6.23 -71.25 l 6.16 -2.74 l 12.77 72.43 l 32.01 -3.93 V 19.71 L 98.77 0.33 Z m 2.32 142.05 l 1.63 9.22 l 73.42 12.24 v -30.68 l -75.01 9.22 h -0.04 Z m 144.49 -19.22 v 12.63 h 15.57 a 14.84 14.84 0 0 1 -1.92 7.31 a 13 13 0 0 1 -5.6 5.11 a 20 20 0 0 1 -8.9 1.8 a 17.53 17.53 0 0 1 -10 -2.8 a 17.87 17.87 0 0 1 -6.44 -8.14 a 33.06 33.06 0 0 1 -2.27 -12.93 a 31.81 31.81 0 0 1 2.32 -12.81 a 18.14 18.14 0 0 1 6.5 -8 a 17.27 17.27 0 0 1 9.82 -2.78 a 19.31 19.31 0 0 1 5.36 0.71 a 14.15 14.15 0 0 1 4.33 2.09 a 12.92 12.92 0 0 1 3.18 3.29 a 15.61 15.61 0 0 1 2 4.44 h 17.27 a 27.22 27.22 0 0 0 -3.46 -10.28 a 28.84 28.84 0 0 0 -7.05 -8.1 a 32.6 32.6 0 0 0 -9.91 -5.29 a 37.91 37.91 0 0 0 -12.06 -1.86 a 37.32 37.32 0 0 0 -14 2.6 a 32.6 32.6 0 0 0 -11.36 7.61 a 35 35 0 0 0 -7.61 12.21 a 46.15 46.15 0 0 0 -2.73 16.44 q 0 11.94 4.54 20.59 a 32.4 32.4 0 0 0 12.69 13.27 a 39.84 39.84 0 0 0 35.84 0.84 a 28.39 28.39 0 0 0 11.67 -11 q 4.25 -7.19 4.24 -17.2 v -9.76 Z m 215.03 40.81 V 88.53 h 51.67 v 13.96 h -34.62 v 16.76 h 27.99 v 13.96 h -27.99 v 16.8 h 34.7 v 13.96 h -51.75 Z m 101.83 -53.3 a 9 9 0 0 0 -3.54 -6.64 c -2.09 -1.59 -5 -2.38 -8.69 -2.38 a 16.63 16.63 0 0 0 -6.26 1 a 8.62 8.62 0 0 0 -3.83 2.78 a 6.74 6.74 0 0 0 -1.33 4 a 6.2 6.2 0 0 0 0.79 3.29 a 7.27 7.27 0 0 0 2.4 2.45 a 16.54 16.54 0 0 0 3.7 1.79 a 40.14 40.14 0 0 0 4.64 1.31 l 6.63 1.54 a 47.19 47.19 0 0 1 9.45 3.08 a 27.46 27.46 0 0 1 7.2 4.68 a 18.84 18.84 0 0 1 4.58 6.39 a 20.37 20.37 0 0 1 1.61 8.29 a 20.65 20.65 0 0 1 -3.54 12.11 a 22.56 22.56 0 0 1 -10.15 7.85 a 41.31 41.31 0 0 1 -15.93 2.76 a 42.69 42.69 0 0 1 -16.17 -2.81 a 23.22 23.22 0 0 1 -10.72 -8.48 q -3.83 -5.66 -4 -14.12 h 16.43 a 10.68 10.68 0 0 0 7.05 9.94 a 19.37 19.37 0 0 0 7.24 1.26 a 18.44 18.44 0 0 0 6.66 -1.09 a 10 10 0 0 0 4.33 -3 a 7.22 7.22 0 0 0 1.57 -4.48 a 6.16 6.16 0 0 0 -1.42 -4 a 10.86 10.86 0 0 0 -4.14 -2.81 a 42.07 42.07 0 0 0 -6.89 -2.14 l -8.07 -1.95 q -9.65 -2.3 -15.23 -7.26 t -5.54 -13.44 a 19.86 19.86 0 0 1 3.72 -12.12 a 24.74 24.74 0 0 1 10.33 -8.11 a 36.74 36.74 0 0 1 15 -2.91 a 35.62 35.62 0 0 1 14.92 2.91 a 23.43 23.43 0 0 1 9.91 8.14 a 21.54 21.54 0 0 1 3.6 12.12 Z m -113.99 53.3 h -16.87 v -57.35 l -1.73 -0.02 l -17.04 57.37 h -16.86 l -16.58 -57.37 l -2.15 0.02 v 57.35 h -16.87 V 88.53 h 28.67 l 14.48 50.56 h 1.75 l 14.48 -50.56 h 28.72 v 75.44 Z m -114.66 0 h 18.27 l -25.33 -75.43 h -23.15 l -25.37 75.43 h 18.3 l 4.93 -16.54 h 27.42 Z m -28.43 -29.7 l 8.22 -27.65 h 3.1 l 8.26 27.65 Z m 278.58 -37.76 a 4 4 0 0 1 -3.67 -2.44 a 4 4 0 0 1 0 -3.1 a 4 4 0 0 1 0.85 -1.27 a 4.25 4.25 0 0 1 1.27 -0.86 a 4.15 4.15 0 0 1 3.1 0 a 4.13 4.13 0 0 1 1.27 0.86 a 4.08 4.08 0 0 1 0.86 1.27 a 4 4 0 0 1 0 3.1 a 4.08 4.08 0 0 1 -0.86 1.27 a 4 4 0 0 1 -1.27 0.86 a 4 4 0 0 1 -1.55 0.31 Z m 0 -1.09 a 2.84 2.84 0 0 0 1.47 -0.39 a 2.94 2.94 0 0 0 1.05 -1 a 2.93 2.93 0 0 0 0 -2.92 a 3 3 0 0 0 -1.06 -1 a 2.93 2.93 0 0 0 -2.92 0 a 3 3 0 0 0 -1 1 a 2.86 2.86 0 0 0 0 2.92 a 3 3 0 0 0 1 1 a 2.83 2.83 0 0 0 1.46 0.39 Z m -1.46 -1.15 V 90.6 h 1.78 a 1.52 1.52 0 0 1 0.69 0.15 a 1.13 1.13 0 0 1 0.47 0.42 a 1.24 1.24 0 0 1 0.17 0.66 a 1.16 1.16 0 0 1 -0.18 0.66 a 1 1 0 0 1 -0.48 0.41 a 1.56 1.56 0 0 1 -0.7 0.14 h -1.2 v -0.72 h 1 a 0.52 0.52 0 0 0 0.36 -0.12 a 0.5 0.5 0 0 0 0.14 -0.37 a 0.47 0.47 0 0 0 -0.14 -0.37 a 0.52 0.52 0 0 0 -0.36 -0.12 h -0.55 v 2.93 Z m 2.39 -1.68 l 0.82 1.68 h -1.11 l -0.75 -1.68 Z M 282.41 1.03 h 17.05 v 75.44 h -17.05 Z m 98.02 37.72 q 0 12.42 -4.71 21 a 32.67 32.67 0 0 1 -12.79 13.17 a 38.57 38.57 0 0 1 -36.31 0 a 32.75 32.75 0 0 1 -12.79 -13.2 q -4.71 -8.66 -4.71 -21 t 4.71 -21.05 a 32.67 32.67 0 0 1 12.75 -13.14 a 38.65 38.65 0 0 1 36.31 0 a 32.67 32.67 0 0 1 12.79 13.17 q 4.71 8.64 4.71 21.05 m -17.35 0 a 33.35 33.35 0 0 0 -2.23 -13 a 17.47 17.47 0 0 0 -6.33 -8 a 18.57 18.57 0 0 0 -19.45 0 a 17.57 17.57 0 0 0 -6.35 8 a 38.59 38.59 0 0 0 0 26 a 17.49 17.49 0 0 0 6.35 8 a 18.57 18.57 0 0 0 19.45 0 a 17.39 17.39 0 0 0 6.33 -8 a 33.4 33.4 0 0 0 2.23 -13 M 246.58 50.17 l 8.76 26.3 h 18.71 l -9.74 -28.33 h -13.23 l -0.79 -2.44 c 2.52 -0.49 6.83 -1.25 10.65 -3.85 a 20 20 0 0 0 8.75 -16.39 a 24.15 24.15 0 0 0 -3.26 -12.75 a 21.9 21.9 0 0 0 -9.36 -8.64 a 32.56 32.56 0 0 0 -14.64 -3 H 212 v 75.4 h 17.06 v -26.3 Z m -0.32 -15.61 a 19.35 19.35 0 0 1 -7.26 1.18 h -9.94 V 14.88 h 9.91 a 18.68 18.68 0 0 1 7.25 1.24 a 9.12 9.12 0 0 1 4.4 3.7 a 10 10 0 0 1 1.5 5.64 a 9.65 9.65 0 0 1 -1.48 5.55 a 8.86 8.86 0 0 1 -4.38 3.55 M 382.04 1.03 v 14 h 29.3 l 0.8 2.45 c -2.48 0.48 -6.67 1.22 -10.43 3.7 v 55.31 h 16.87 v -61.5 h 19.62 v -14 Z"/>
+                    </svg>
+                </div>
+                <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/riotbar/4487be6bfcce69b795ed84dd12923fed7d28bfe9-116x17.png?&amp;h=75&amp;fit=max" alt="logo-vng">
+            </div>
+    
+            <p class="footer-copyright">
+                © 2009-2022 bởi Tập Đoàn Riot Games. LIÊN MINH HUYỀN THOẠI và mọi logo liên quan là nhãn hiệu, nhãn hiệu dịch vụ và/hoặc nhãn hiệu đã đăng ký của Tập Đoàn Riot Games.
+            </p>
+    
+            <nav class="footer-nav-bottom">
+                <ul>
+                    <li><a href="#">Chính Sách Bảo Mật</a></li>
+                    <li><a href="#">Điều Khoản Sử Dụng (Riot)</a></li>
+                    <li><a href="#">Tùy Chọn Cookies</a></li>
+                </ul>
+            </nav>
+            <div class="footer-rating" bis_skin_checked="1">
+                <div class="footer-rating-text-wrapper" bis_skin_checked="1">
+                    <span class="rating-logo">
+                        <img src="https://cmsassets.rgpub.io/sanity/images/dsfx7636/riotbar/955297b6af6c805bf77e0b41248050a29435018d-1280x571.png?&amp;h=100&amp;fit=max" alt="" title="">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Lấy các thành phần cần thiết
+        const prevBtn = document.querySelector('.ability-nav-btn.prev');
+        const nextBtn = document.querySelector('.ability-nav-btn.next');
+        const divider = document.querySelector('.ability-nav-bar .divider'); 
+        const dividerFill = document.querySelector('.divider-fill'); // Lớp chuyển động
+        const abilityItems = document.querySelectorAll('.ability-item'); 
+        const abilityDetails = document.querySelectorAll('.ability-detail-content');
+        
+        // 2. Định nghĩa trạng thái cuộn ảo (0: Bắt đầu, 1: Đã cuộn qua trang đầu tiên)
+        let currentState = 0; 
+
+        // 3. Hàm cập nhật giao diện dựa trên trạng thái
+        function updateScrollUI() {
+            if (currentState === 0) {
+                // TRẠNG THÁI 1: Bắt đầu (Thanh xám sáng, mũi tên trái vô hiệu hóa)
+                
+                // HIỆU ỨNG: Thanh màu đen thu về bên phải (Trượt từ phải sang trái)
+                // Phải đặt origin = 'right' để đảm bảo hiệu ứng thu về từ phải sang trái.
+                dividerFill.style.transformOrigin = 'left'; 
+                divider.classList.remove('scrolled-dark'); 
+                
+                // Nút Trái Vô hiệu hóa (màu xám tối)
+                prevBtn.classList.remove('active-scroll');
+                prevBtn.classList.add('disabled');
+                
+                // Nút Phải Kích hoạt (màu vàng)
+                nextBtn.classList.add('active-scroll');
+                nextBtn.classList.remove('disabled');
+
+            } else if (currentState === 1) {
+                // TRẠNG THÁI 2: Đã cuộn (Thanh đen, mũi tên phải vô hiệu hóa)
+                
+                // HIỆU ỨNG: Thanh màu đen mở rộng từ trái sang phải
+                // Phải đặt origin = 'left' để đảm bảo hiệu ứng mở rộng ra bên phải.
+                dividerFill.style.transformOrigin = 'left'; 
+                divider.classList.add('scrolled-dark'); 
+                
+                // Nút Trái Kích hoạt (màu vàng)
+                prevBtn.classList.add('active-scroll');
+                prevBtn.classList.remove('disabled');
+                
+                // Nút Phải Vô hiệu hóa (màu xám tối)
+                nextBtn.classList.remove('active-scroll');
+                nextBtn.classList.add('disabled');
+            }
+        }
+
+
+        // 4. Gán sự kiện cho các nút điều hướng
+        nextBtn.addEventListener('click', () => {
+            if (currentState === 0) {
+                // KÍCH HOẠT TRẠNG THÁI 2 (Chuyển sang màu đen, trượt từ trái sang phải)
+                currentState = 1;
+                updateScrollUI();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentState === 1) {
+                // KÍCH HOẠT TRẠNG THÁI 1 (Quay về màu xám, trượt từ phải sang trái)
+                currentState = 0;
+                updateScrollUI();
+            }
+        });
+
+        // 5. Chức năng chuyển đổi nội dung kỹ năng (giữ nguyên)
+        abilityItems.forEach((item, index) => {
+            let abilityKey = '';
+            if (index === 0) {
+                abilityKey = 'passive';
+            } else if (index === 1) {
+                abilityKey = 'q';
+            } else if (index === 2) {
+                abilityKey = 'w';
+            } else if (index === 3) {
+                abilityKey = 'e';
+            } else if (index === 4) {
+                abilityKey = 'r';
+            }
+            item.setAttribute('data-ability-key', abilityKey);
+            
+            item.addEventListener('click', () => {
+                // Chức năng chuyển đổi tab luôn hoạt động 
+                abilityItems.forEach(i => i.classList.remove('active'));
+                item.classList.add('active');
+
+                const selectedKey = item.getAttribute('data-ability-key');
+                
+                abilityDetails.forEach(detail => {
+                    detail.classList.remove('active');
+                });
+                
+                const targetDetail = document.querySelector(`.ability-detail-content[data-ability="${selectedKey}"]`);
+                if (targetDetail) {
+                    targetDetail.classList.add('active');
+                }
+            });
+        });
+
+
+        // 6. Khởi tạo trạng thái ban đầu
+        updateScrollUI();
+        
+        // Xóa logic cuộn ngang không cần thiết
+        document.querySelector('.abilities-list').style.overflowX = 'hidden';
+
+    });
+
+
+
+
+
+
+    // =========================================================
+    // CODE MỚI: XỬ LÝ CHUYỂN ĐỔI VÀ CUỘN TRANG PHỤC (SKINS)
+    // =========================================================
+
+        const skinsList = document.querySelector('.skin-thumbnails-list');
+        const skinItems = document.querySelectorAll('.skin-item');
+        const mainSplashArt = document.querySelector('.main-splash-art img');
+        const skinPrevBtn = document.querySelector('.skin-nav-btn.prev');
+        const skinNextBtn = document.querySelector('.skin-nav-btn.next');
+        const skinDividerFill = document.querySelector('.skin-divider-fill'); // Thanh tiến trình
+
+        // Hằng số cho cuộn và fill
+        const ITEM_WIDTH_SCROLL = 246; // 214px (width) + 24px (gap)
+        const TOTAL_SKINS = skinItems.length; // Tổng cộng 13
+        const SKINS_PER_VIEW = 5;      // Hiển thị 5 ảnh
+        const MAX_SCROLL_POSITION = TOTAL_SKINS - SKINS_PER_VIEW; // Vị trí cuộn tối đa (13 - 5 = 8)
+
+        // Hằng số cho logic Fill (Index 1 đến Index 8 là 9 mục tham gia fill)
+        const TOTAL_FILL_ITEMS = 8;    // Số lượng items tham gia fill (từ Index 1 đến Index 9)
+        const FILL_START_INDEX = 1;    // Bắt đầu fill từ Index 1
+        const FILL_END_INDEX = 8;      // Kết thúc fill ở Index 8
+
+        let currentSkinIndex = 0; // Index của thumbnail đang active (cũng là vị trí cuộn đầu tiên)
+
+        // Hàm cập nhật trạng thái của nút điều hướng
+        function updateSkinNavButtons() {
+            // Nút PREV vô hiệu hóa khi ở ảnh đầu tiên
+            skinPrevBtn.classList.toggle('active', currentSkinIndex > 0);
+            skinPrevBtn.classList.toggle('disabled', currentSkinIndex === 0);
+
+            // Nút NEXT vô hiệu hóa khi ở ảnh cuối cùng
+            skinNextBtn.classList.toggle('active', currentSkinIndex < TOTAL_SKINS - 1);
+            skinNextBtn.classList.toggle('disabled', currentSkinIndex === TOTAL_SKINS - 1);
+        }
+
+        // Hàm thực hiện cuộn, chọn và fill tiến trình
+        function selectAndScrollSkin() {
+            // 1. Cập nhật trạng thái Active và ảnh lớn
+            skinItems.forEach(i => i.classList.remove('active'));
+            skinItems[currentSkinIndex].classList.add('active');
+            
+            const skinImgSrc = skinItems[currentSkinIndex].querySelector('img').src;
+            mainSplashArt.src = skinImgSrc;
+
+            // 2. Thực hiện cuộn: Vị trí cuộn luôn bằng index của ảnh đang được chọn
+            const scrollOffset = currentSkinIndex * ITEM_WIDTH_SCROLL;
+            skinsList.scrollTo({
+                left: scrollOffset,
+                behavior: 'smooth'
+            });
+            
+            // 3. CẬP NHẬT THANH TIẾN TRÌNH (LOGIC FILL MỚI)
+            let progressPercentage = 0;
+
+            if (currentSkinIndex >= FILL_START_INDEX && currentSkinIndex <= FILL_END_INDEX) {
+                // TÍNH TOÁN CẬP NHẬT: Index 1 là 1/8, Index 9 là 8/8 = 100%
+                const currentStep = currentSkinIndex; 
+                
+                progressPercentage = (currentStep / TOTAL_FILL_ITEMS) * 100;
+
+            } else if (currentSkinIndex > FILL_END_INDEX) {
+                // Nếu đã qua mục fill cuối cùng (từ index 10 trở đi)
+                progressPercentage = 100;
+            }
+            // Nếu currentSkinIndex = 0, mặc định là 0%
+
+            skinDividerFill.style.width = `${progressPercentage}%`;
+            
+            // 4. Cập nhật nút điều hướng
+            updateSkinNavButtons();
+        }
+
+        // Xử lý nút NEXT (sang phải) - Cuộn 1 ảnh/lần
+        skinNextBtn.addEventListener('click', () => {
+            if (currentSkinIndex < TOTAL_SKINS - 1) {
+                currentSkinIndex = currentSkinIndex + 1;
+                selectAndScrollSkin();
+            }
+        });
+
+        // Xử lý nút PREV (sang trái) - Cuộn 1 ảnh/lần
+        skinPrevBtn.addEventListener('click', () => {
+            if (currentSkinIndex > 0) {
+                currentSkinIndex = currentSkinIndex - 1;
+                selectAndScrollSkin();
+            }
+        });
+
+        // Xử lý click vào từng thumbnail
+        skinItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                // Đặt index được chọn làm index mới
+                currentSkinIndex = index; 
+                selectAndScrollSkin();
+            });
+        });
+
+        // Khởi tạo trạng thái ban đầu (Chọn Aatrox Default)
+        selectAndScrollSkin();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>

@@ -1,0 +1,982 @@
+/* ====================================================
+   RESPONSIVE DESIGN - TABLET & MOBILE
+   League of Legends Champions Page Style
+   ==================================================== */
+
+/* ====================================================
+   BREAKPOINTS
+   ==================================================== */
+/* Desktop: 1200px and above (default styling in style.css)
+   Tablet: 768px to 1199px
+   Mobile: 320px to 767px
+*/
+
+/* ====================================================
+   TABLET (768px - 1199px)
+   ==================================================== */
+@media (max-width: 1199px) {
+    
+    /* HEADER ADJUSTMENTS */
+    .header-container {
+        padding: 10px 20px;
+        height: 70px;
+    }
+    
+    .header-left {
+        min-width: auto;
+    }
+    
+    .logo-riot svg {
+        width: 60px;
+        height: 20px;
+    }
+    
+    .header-center {
+        width: auto;
+    }
+    
+    .header-center-ct {
+        margin-left: 12px;
+    }
+    
+    .header-center-ct a p {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .header-right .search-icon {
+        height: 40px;
+        width: 40px;
+        margin-right: 8px;
+    }
+    
+    .header-right .search-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .login-btn a {
+        padding: 7px 14px;
+        font-size: 12px;
+        width: auto;
+    }
+    
+    /* MAIN CONTENT ADJUSTMENTS */
+    .sc-ct {
+        padding: 48px 32px;
+    }
+    
+    .sc-ct-1 {
+        font-size: 18px;
+    }
+    
+    .sc-ct-2 h1 {
+        font-size: 48px;
+    }
+    
+    .sc-ct-3 {
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        max-width: 600px;
+    }
+    
+    /* CHAMPIONS GRID - 2 COLUMNS FOR TABLET */
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .champion-card {
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+    
+    .champion-card .champion-name {
+        font-size: 0.85rem;
+        padding: 0.75rem;
+        height: 50px;
+    }
+    
+    /* CONTENT-1 (Detail Page) */
+    .content-1 {
+        min-height: 600px;
+        padding: 100px 60px 0 40px;
+    }
+    
+    .content-1 .darkin-title {
+        font-size: 24px;
+        width: 100%;
+    }
+    
+    .content-1 .champion-name {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+    
+    .content-1 .champion-description {
+        font-size: 16px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    
+    /* STATS CONTAINER */
+    .stats-container {
+        gap: 12px;
+    }
+    
+    .stat-item-border {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .stat-item {
+        width: 112px;
+        height: 112px;
+        padding: 12px;
+    }
+    
+    .stat-icon {
+        height: 40px;
+        width: 40px;
+        margin-bottom: 12px;
+    }
+    
+    .stat-label {
+        font-size: 9px;
+    }
+    
+    .stat-value {
+        font-size: 13px;
+    }
+    
+    /* ABILITIES SECTION */
+    .abilities-section {
+        padding: 60px 40px 100px 40px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .abilities-content {
+        width: 100%;
+    }
+    
+    .abilities-title {
+        font-size: 36px;
+        margin-bottom: 24px;
+    }
+    
+    .abilities-list {
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    
+    .ability-item {
+        width: 90px;
+        min-width: 90px;
+        max-width: 90px;
+    }
+    
+    .ability-item img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 12px;
+    }
+    
+    .ability-item p {
+        font-size: 12px;
+    }
+    
+    .ability-details {
+        width: 100%;
+        min-height: 400px;
+    }
+    
+    .ability-media-placeholder {
+        margin-bottom: 24px;
+    }
+    
+    .ability-details .ability-name {
+        font-size: 20px;
+        margin-bottom: 4px;
+    }
+    
+    .ability-details .ability-type {
+        font-size: 14px;
+        margin-bottom: 3px;
+        margin-top: 16px;
+    }
+    
+    .ability-details .champion-description {
+        font-size: 16px;
+        max-width: 100%;
+    }
+    
+    /* SKINS SECTION */
+    .skins-section {
+        padding: 0 40px 60px 40px;
+    }
+    
+    .skins-title {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+    
+    .skin-gallery {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .skin-thumbnails-wrapper {
+        width: 100%;
+        max-width: 100%;
+        height: 160px;
+    }
+    
+    .skin-item {
+        min-width: 160px;
+        max-width: 160px;
+    }
+    
+    .skin-item img {
+        height: 100px;
+    }
+    
+    .skin-item p {
+        font-size: 11px;
+        margin: 12px 0 0 0;
+    }
+    
+    .skin-nav-bar {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 24px;
+    }
+    
+    /* FOOTER */
+    .main-footer-container {
+        padding: 30px 20px;
+    }
+    
+    .footer-nav-top ul,
+    .footer-nav-bottom ul {
+        gap: 10px 20px;
+    }
+    
+    .footer-nav-top ul li a,
+    .footer-nav-bottom ul li a {
+        font-size: 11px;
+    }
+    
+    .footer-copyright {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        padding: 0 20px;
+        margin: 15px auto 20px auto;
+    }
+    
+    .footer-age-rating {
+        width: 100%;
+        max-width: 250px;
+        padding: 12px 16px;
+    }
+}
+
+/* ====================================================
+   MOBILE LARGE (480px - 767px)
+   ==================================================== */
+@media (max-width: 767px) {
+    
+    /* HEADER ADJUSTMENTS */
+    .header-container {
+        padding: 8px 15px;
+        height: 60px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .header-left {
+        order: 1;
+        min-width: auto;
+    }
+    
+    .logo-riot svg {
+        width: 50px;
+        height: 18px;
+    }
+    
+    .header-center {
+        display: none; /* Hide on mobile */
+        width: 100%;
+        order: 3;
+        flex-basis: 100%;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    
+    .header-center.active {
+        display: flex;
+    }
+    
+    .header-center-ct {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+        margin-left: 0;
+    }
+    
+    .header-center-ct a p {
+        padding: 8px 12px;
+        font-size: 13px;
+        margin: 0 4px;
+    }
+    
+    .header-right {
+        order: 2;
+        gap: 8px;
+    }
+    
+    .header-right .search-icon {
+        height: 36px;
+        width: 36px;
+        margin-right: 4px;
+    }
+    
+    .header-right .search-icon svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .header-lg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+    
+    .login-btn {
+        width: auto;
+        height: auto;
+        padding: 0;
+    }
+    
+    .login-btn a {
+        padding: 6px 12px;
+        font-size: 11px;
+        height: 32px;
+        width: auto;
+    }
+    
+    /* MAIN CONTENT ADJUSTMENTS */
+    .sc-ct {
+        padding: 32px 16px;
+        gap: 12px;
+    }
+    
+    .sc-ct-1 {
+        font-size: 14px;
+    }
+    
+    .sc-ct-2 h1 {
+        font-size: 36px;
+    }
+    
+    .sc-ct-3 {
+        width: 100%;
+        height: auto;
+        font-size: 14px;
+        max-width: 100%;
+    }
+    
+    .sc-ct-3 p {
+        line-height: 1.5;
+    }
+    
+    /* CHAMPIONS GRID - 2 COLUMNS FOR MOBILE */
+    .champions-section {
+        padding: 1rem;
+    }
+    
+    .champions-grid {
+        gap: 0.75rem;
+    }
+    
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .champion-card {
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    
+    .champion-card .champion-name {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        height: 40px;
+    }
+    
+    /* CONTENT-1 (Detail Page) */
+    .content-1 {
+        min-height: auto;
+        padding: 60px 20px 0 20px;
+        background-position: center;
+    }
+    
+    .content-1::before {
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%);
+    }
+    
+    .content-1 .darkin-title {
+        font-size: 18px;
+        width: 100%;
+        height: auto;
+        line-height: 24px;
+    }
+    
+    .content-1 .champion-name {
+        font-size: 32px;
+        margin-bottom: 16px;
+        max-width: 100%;
+    }
+    
+    .content-1 .champion-description {
+        font-size: 14px;
+        max-width: 100%;
+        margin-bottom: 24px;
+        line-height: 1.5;
+    }
+    
+    /* STATS CONTAINER */
+    .stats-container {
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 30px;
+    }
+    
+    .stat-item-border {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .stat-item {
+        width: 92px;
+        height: 92px;
+        padding: 10px;
+    }
+    
+    .stat-icon {
+        height: 32px;
+        width: 32px;
+        margin-bottom: 8px;
+    }
+    
+    .stat-label {
+        font-size: 8px;
+    }
+    
+    .stat-value {
+        font-size: 12px;
+    }
+    
+    .champion-stats-links {
+        border-top: none;
+        padding-top: 0;
+        margin-top: 30px;
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .champion-stats-links p,
+    .champion-stats-links a {
+        margin-right: 0;
+        margin-bottom: 8px;
+        display: block;
+        text-align: center;
+    }
+    
+    /* ABILITIES SECTION */
+    .abilities-section {
+        padding: 40px 16px 80px 16px;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .abilities-content {
+        width: 100%;
+    }
+    
+    .abilities-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .abilities-list {
+        width: 100%;
+        height: auto;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin: 0 0 16px 0;
+    }
+    
+    .ability-item {
+        width: 70px;
+        min-width: 70px;
+        max-width: 70px;
+        opacity: 0.6;
+    }
+    
+    .ability-item img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 8px;
+    }
+    
+    .ability-item p {
+        font-size: 10px;
+        line-height: 1.2;
+    }
+    
+    .ability-details {
+        width: 100%;
+        min-height: 300px;
+    }
+    
+    .ability-media-placeholder {
+        margin-bottom: 20px;
+    }
+    
+    .ability-details .ability-name {
+        font-size: 18px;
+        margin-bottom: 3px;
+    }
+    
+    .ability-details .ability-type {
+        font-size: 12px;
+        margin-bottom: 2px;
+        margin-top: 12px;
+    }
+    
+    .ability-details .champion-description {
+        font-size: 14px;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+    
+    .ability-nav-bar {
+        margin-top: 16px;
+    }
+    
+    /* SKINS SECTION */
+    .skins-section {
+        padding: 0 16px 40px 16px;
+    }
+    
+    .skins-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .main-splash-art {
+        margin-bottom: 16px;
+    }
+    
+    .skin-gallery {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    
+    .skin-thumbnails-wrapper {
+        width: 100%;
+        max-width: 100%;
+        height: 140px;
+        margin-bottom: 12px;
+    }
+    
+    .skin-item {
+        min-width: 130px;
+        max-width: 130px;
+    }
+    
+    .skin-item img {
+        height: 80px;
+    }
+    
+    .skin-item p {
+        font-size: 10px;
+        margin: 8px 0 0 0;
+    }
+    
+    .skin-nav-bar {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 16px;
+        gap: 8px;
+    }
+    
+    .skin-nav-btn {
+        font-size: 20px;
+    }
+    
+    /* FOOTER */
+    .main-footer-container {
+        padding: 24px 16px;
+        margin-top: 12px;
+    }
+    
+    .footer-nav-top {
+        padding: 16px;
+        height: auto;
+    }
+    
+    .footer-nav-top ul,
+    .footer-nav-bottom ul {
+        gap: 8px 16px;
+    }
+    
+    .footer-nav-top ul li a,
+    .footer-nav-bottom ul li a {
+        font-size: 10px;
+    }
+    
+    .footer-social-links {
+        margin-top: 12px;
+        margin-bottom: 24px;
+        gap: 6px;
+    }
+    
+    .footer-social-links a {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .footer-social-links svg {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .footer-copyright {
+        width: 100%;
+        height: auto;
+        font-size: 11px;
+        padding: 0 12px;
+        margin: 12px auto 16px auto;
+        line-height: 1.4;
+    }
+    
+    .footer-nav-bottom {
+        margin-bottom: 16px;
+    }
+    
+    .footer-age-rating {
+        width: 100%;
+        max-width: 220px;
+        padding: 10px 12px;
+    }
+    
+    .footer-logos {
+        gap: 12px;
+    }
+    
+    .footer-logos .riot-logo-footer svg {
+        height: 24px;
+    }
+    
+    .footer-logos .vng-logo-footer {
+        font-size: 22px;
+    }
+}
+
+/* ====================================================
+   MOBILE SMALL (320px - 479px)
+   ==================================================== */
+@media (max-width: 479px) {
+    
+    /* HEADER ADJUSTMENTS */
+    .header-container {
+        padding: 8px 12px;
+        height: 56px;
+    }
+    
+    .logo-riot svg {
+        width: 45px;
+        height: 16px;
+    }
+    
+    .icon-logo svg {
+        width: 16px;
+    }
+    
+    .header-center-ct {
+        gap: 0;
+    }
+    
+    .header-center-ct a p {
+        padding: 6px 8px;
+        font-size: 11px;
+        margin: 0 2px;
+    }
+    
+    .header-right {
+        gap: 4px;
+    }
+    
+    .header-right .search-icon {
+        height: 32px;
+        width: 32px;
+    }
+    
+    .header-right .search-icon svg {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .login-btn a {
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    
+    /* MAIN CONTENT ADJUSTMENTS */
+    .sc-ct {
+        padding: 24px 12px;
+        gap: 10px;
+    }
+    
+    .sc-ct-1 {
+        font-size: 12px;
+    }
+    
+    .sc-ct-2 h1 {
+        font-size: 28px;
+        line-height: 1;
+    }
+    
+    .sc-ct-3 {
+        font-size: 13px;
+        max-width: 100%;
+    }
+    
+    /* CHAMPIONS GRID - 2 COLUMNS */
+    .champions-section {
+        padding: 0.75rem;
+    }
+    
+    .champions-grid {
+        gap: 0.5rem;
+    }
+    
+    .row-1,
+    .row-2,
+    .row-3,
+    .row-4 {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .champion-card {
+        margin-right: 2px;
+        margin-left: 2px;
+    }
+    
+    .champion-card .champion-name {
+        font-size: 0.7rem;
+        padding: 0.4rem;
+        height: 36px;
+        line-height: 1.2;
+    }
+    
+    /* CONTENT-1 (Detail Page) */
+    .content-1 {
+        min-height: auto;
+        padding: 40px 16px 0 16px;
+    }
+    
+    .content-1 .darkin-title {
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 6px;
+    }
+    
+    .content-1 .champion-name {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .content-1 .champion-description {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+    
+    /* STATS CONTAINER */
+    .stats-container {
+        gap: 10px;
+        margin-top: 24px;
+    }
+    
+    .stat-item-border {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .stat-item {
+        width: 82px;
+        height: 82px;
+        padding: 8px;
+    }
+    
+    .stat-icon {
+        height: 28px;
+        width: 28px;
+        margin-bottom: 6px;
+    }
+    
+    .stat-label {
+        font-size: 7px;
+    }
+    
+    .stat-value {
+        font-size: 11px;
+    }
+    
+    /* ABILITIES SECTION */
+    .abilities-section {
+        padding: 32px 12px 60px 12px;
+        gap: 20px;
+    }
+    
+    .abilities-title {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+    
+    .abilities-list {
+        gap: 6px;
+    }
+    
+    .ability-item {
+        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
+    }
+    
+    .ability-item img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 6px;
+    }
+    
+    .ability-item p {
+        font-size: 9px;
+    }
+    
+    .ability-details {
+        min-height: 250px;
+    }
+    
+    .ability-details .ability-name {
+        font-size: 16px;
+    }
+    
+    .ability-details .ability-type {
+        font-size: 11px;
+    }
+    
+    /* SKINS SECTION */
+    .skins-section {
+        padding: 0 12px 32px 12px;
+    }
+    
+    .skins-title {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+    
+    .skin-thumbnails-wrapper {
+        height: 120px;
+    }
+    
+    .skin-item {
+        min-width: 110px;
+        max-width: 110px;
+    }
+    
+    .skin-item img {
+        height: 70px;
+    }
+    
+    .skin-item p {
+        font-size: 9px;
+    }
+    
+    /* FOOTER */
+    .footer-nav-top ul,
+    .footer-nav-bottom ul {
+        gap: 6px 12px;
+    }
+    
+    .footer-nav-top ul li a,
+    .footer-nav-bottom ul li a {
+        font-size: 9px;
+    }
+    
+    .footer-copyright {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+    
+    .footer-age-rating {
+        max-width: 200px;
+        padding: 8px 10px;
+    }
+}
+
+/* ====================================================
+   UTILITY CLASSES
+   ==================================================== */
+
+/* Hide on mobile */
+@media (max-width: 767px) {
+    .desktop-only {
+        display: none !important;
+    }
+}
+
+/* Show on mobile only */
+@media (min-width: 768px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* Smooth transitions */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Touch-friendly buttons on mobile */
+@media (max-width: 767px) {
+    button, a.btn, input[type="button"], input[type="submit"] {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+/* Improve readability on small screens */
+@media (max-width: 479px) {
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}

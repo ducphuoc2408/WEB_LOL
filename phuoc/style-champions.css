@@ -1,0 +1,1340 @@
+
+@font-face {
+    font-family: 'Beaufort';
+    /* Đường dẫn đến file font BOLD/HEAVY ITALIC của bạn */
+    src: url('./fonts/BeaufortforLOL-BoldItalic.woff') format('woff');
+    font-weight: 800; /* Thiết lập trọng lượng 800 (Heavy) */
+    font-style: italic; /* Quan trọng: Thiết lập kiểu chữ nghiêng */
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Beaufort';
+    /* Đường dẫn đến file font REGULAR của bạn */
+    src: url('./fonts/BeaufortforLOL-Regular.woff') format('woff');
+    font-weight: 400; /* Thiết lập trọng lượng 400 (Regular) */
+    font-style: normal; /* Kiểu chữ bình thường */
+    font-display: swap;
+}
+
+body {
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 30px;
+    height: 80px;
+    box-sizing: border-box;
+    position: static;
+    background-color: rgb(0, 0, 0);
+}
+
+/*Begin Header Left */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.header-left:hover .icon-logo svg,
+.header-left:hover .logo-riot svg {
+    cursor: pointer;
+    fill: red;
+}
+
+.logo-riot svg {
+    width: 75px;
+    height: 24px;
+    fill: #f9f9f9;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 80px;
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    tab-size: 4;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+}
+
+.header-container .icon-logo svg {
+    box-sizing: border-box;
+    color: rgb(85, 26, 139);
+    display : block;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 5px;
+    margin: 0;
+    padding: 0;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    width: 20px;
+    fill: #7e7e7e;
+
+}
+/*End Header Left */
+
+
+/*Begin Header Center */
+.header-center {
+    align-items:center;
+    box-sizing:border-box;
+    color: rgb(10, 20, 40);
+    display:flex;
+    flex-basis:0%;
+    flex-grow:1;
+    flex-shrink:1;
+    font-family:"Neue Frutiger World", Tahoma, sans-serif;
+    font-size:14px;
+    font-weight:700;
+    height:78.4px;
+    justify-content:flex-start;
+    line-height:normal;
+    margin: 0 !important;
+    padding:0;
+    scroll-margin-top:80px;
+    tab-size:4;
+    text-align:left;
+    text-rendering:optimizespeed;
+    text-size-adjust:100%;
+    unicode-bidi:isolate;
+    width:809.938px;
+}
+
+.logo-center-desktop {
+    height: 80px;
+    margin-left: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo-center-desktop svg {
+    box-sizing: border-box;
+    color: rgb(85, 26, 139);
+    display: block;
+    font-family:"Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 26px;
+    margin: 0;
+    min-width:38px;
+    padding: 0;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-decoration-color: rgb(0, 0, 238);
+    text-decoration-line: none;
+    text-size-adjust: 100%;
+    width:38px;
+    text-rendering: optimizeSpeed;
+    text-decoration: line;
+    text-decoration-thickness: auto;
+    text-decoration-skip-ink: auto;
+    position: relative;
+}
+.header-center-ct {
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.header-center-ct a {
+    color: white;
+    position: relative;
+    text-decoration: none;
+    margin: 7px 0;
+    z-index: 1;
+}
+.header-center-ct a p {
+    padding: 7.5px 16px;
+    margin: 0 4px 0 0;
+    color:#f9f9f9;
+    font-size:13px;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+.header-center-ct a:hover p {
+    background-color: rgba(128, 128, 128,.3);
+    border-radius: 6.4px;
+}
+
+.desktop-link-item-underline {
+    display: none;
+}
+
+
+.header-center-ct a:hover .desktop-link-item-underline {
+    display: block;
+    background-color: rgb(0, 160, 186);
+    position: absolute;
+    bottom: 7px;
+    top: 45px;
+    height: 4px;
+    width: 100% !important;
+    border-radius: 2px;
+}
+
+
+.desktop-link-item-icon-linkout {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    padding: 10px 0;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.header-center-ct a:hover .dropdown-menu {
+    display: block;
+}
+
+/*End Header Center */
+
+/*Begin Header Right */
+.header-right {
+    display: flex;
+    align-items: center;
+}   
+
+.header-right .search-icon {
+    /* ensure a perfectly round button */
+    display:inline-grid;
+    place-items:center; 
+    height:44px;
+    width: 45px;
+    border-radius: 16px;
+    background:#1f1f1f; 
+    margin-right:10px;
+    box-sizing:border-box;
+    overflow:hidden;
+    line-height:0; 
+    cursor:pointer;
+}
+
+.header-right .search-icon svg {
+    width:18px;
+    height:18px;
+    fill:#ffffff; /* white magnifier */
+    display:block; /* avoid inline whitespace */
+}
+.header-right .header-lg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+    color: rgb(10, 20, 40);
+    color-scheme: light only;
+    font-family: "FF Mark W05", Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 78.4px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    top: 0px;
+    unicode-bidi: isolate;
+    width: 32px;
+}
+.login-btn {
+    align-items: center;
+    box-sizing: border-box;
+    color: rgb(10, 20, 40);
+    color-scheme: light only;
+    display: flex;
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    height: 78.4px;
+    justify-content: center;
+    line-height: normal;
+    
+    /* Gộp các thuộc tính margin (top, right, bottom, left) đều là 0px */
+    margin: 0px; 
+    
+    /* Gộp các thuộc tính padding (top, right, bottom, left) đều là 0px */
+    padding: 0px; 
+    
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-align: left;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    unicode-bidi: isolate;
+    width: 124.463px;
+}
+.login-btn a {
+    /* Background Properties */
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(11, 196, 226);
+    background-image: none;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-size: auto;
+
+    /* Border & Box Model */
+    /* Gộp 4 thuộc tính border-radius (đều là 12px) */
+    border-radius: 12px;
+    box-sizing: border-box;
+    height: 32px;
+    width: 112.463px;
+    display: inline-block;
+
+    /* Gộp 4 thuộc tính margin (đều là 0px) */
+    margin: 0px;
+
+    /* Gộp padding: top/bottom = 8px, left/right = 16px */
+    padding: 8px 16px;
+
+    /* Typography (Chữ) */
+    color: rgb(17, 17, 17);
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.04px;
+    line-height: 16px;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+
+    /* Gộp các thuộc tính text-decoration */
+    text-decoration: none;
+    /* (Bao gồm: text-decoration-line: none, 
+                 text-decoration-color: rgb(17, 17, 17),
+                 text-decoration-style: solid,
+                 text-decoration-thickness: auto) */
+
+    /* Transition (Hiệu ứng) */
+    /* Gộp 4 thuộc tính transition */
+    transition: color 1s cubic-bezier(0.06, 0.81, 0, 0.98) 0s;
+    /* (Bao gồm: transition-property: color,
+                 transition-duration: 1s,
+                 transition-timing-function: ...,
+                 transition-delay: 0s) */
+    
+    transition-behavior: normal;
+
+    /* Other Properties */
+    color-scheme: light only;
+    cursor: pointer;
+    position: relative;
+    scroll-margin-top: 80px;
+    tab-size: 4;
+    text-rendering: optimizeSpeed;
+    text-size-adjust: 100%;
+    vertical-align: middle;
+    z-index: 0;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
+
+/*End Header Right */
+
+/* Footer */
+.main-footer-container {
+    background-color: rgb(17, 17, 17);
+    color: #a0a0a0;
+    padding-top: 0 !important;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.footer-nav-top {
+    padding: 24px 0;
+    background-color: rgb(41,41,41);
+    width: 100%;
+    height: 30.95px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    SCROLL-MARGIN-TOP: 80px;
+}
+
+.footer-nav-top ul,
+.footer-nav-bottom ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 15px 30px;
+}
+
+.footer-nav-top ul li a,
+.footer-nav-bottom ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.footer-nav-top ul li a:hover,
+.footer-nav-bottom ul li a:hover {
+    color: #c4c4c4;
+}
+
+.footer-social-links {
+    margin-top: 18px;
+    margin-bottom: 42px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.footer-social-links a {
+    background-color: rgb(41,41,41);
+    transition: background-color 0.3s ease;
+    border-radius: 15px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social-links a:hover {
+    color: #fff;
+}
+
+.footer-social-links svg {
+    width: 16px;
+    height: 16px;
+    fill: #fdfefe;
+   
+}
+
+.footer-logos {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.footer-logos .riot-logo-footer svg {
+    height: 30px;
+    width: auto;
+    fill: #777;
+}
+
+.footer-logos .vng-logo-footer {
+    font-size: 28px;
+    font-weight: 800;
+    color: #777;
+    letter-spacing: -1px;
+    font-style: italic;
+    /* Placeholder đơn giản cho logo VNG Games */
+    font-family: 'Inter', sans-serif; 
+}
+
+.footer-copyright {
+    font-size: 13px;
+    font-weight: 500;
+    width: 640px;
+    height: 36px;
+    margin: 20px auto 30px auto;
+    line-height: 18.2px;
+    color: rgb(126,126,126);
+}
+
+.footer-nav-bottom {
+    margin-bottom: 30px;
+}
+
+.footer-age-rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 2px solid #555;
+    background-color: #000;
+    padding: 15px 20px;
+    width: 280px;
+    border-radius: 4px;
+}
+
+.footer-rating {
+    background-color: #313131; 
+    border-radius: 8px;
+    padding: 12px;
+    display: inline-block;
+}
+.rating-logo img {
+    display: block;
+    height: auto; 
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.content-1 {
+    min-height: 800px;
+    background-image: url(./img/aatrox/Aatrox_0.jpg);
+    background-size: cover;
+    background-position: 70% center; /* Chỉnh vị trí ảnh để Aatrox nằm bên phải */
+    background-repeat: no-repeat;
+    
+    position: relative; 
+    z-index: 0; 
+    
+    color: white; 
+    padding: 150px 100px 0 60px; /* Thêm padding trên và trái/phải */
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Lớp phủ tối dần từ trái qua phải (Dark Gradient Overlay) */
+.content-1::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient: Rất tối bên trái (90%), giảm độ tối dần về bên phải (10%) */
+   background: linear-gradient(270deg, rgba(0, 0, 0, 0) 24.44%, rgba(0, 0, 0, 0.6) 56.63%);
+    z-index: 1; 
+}
+
+/* Đảm bảo tất cả nội dung nằm trên lớp phủ và căn trái */
+.content-1 h1, 
+.content-1 h2, 
+.content-1 p, 
+.content-1 .stats-container {
+    position: relative;
+    z-index: 2; /* Đẩy nội dung lên trên lớp phủ */
+    margin: 0;
+    max-width: 600px; /* Giới hạn chiều rộng nội dung */
+}
+
+
+/* Tiêu đề nhỏ (QUỶ KIẾM DARKIN) */
+.content-1 .darkin-title {
+    font-size: 32px;
+    font-weight: 700;
+    font-style: italic;
+    font-family: "Beaufort", sans-serif;
+    line-height: 40px;
+    color: rgb(200,170,110);  /* Màu chữ xám nhạt */
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    width: 700px;
+    height: 40px;
+}
+
+/* Tên tướng (AATROX) */
+.content-1 .champion-name {
+    font-size: 72px; /* Kích thước chữ lớn */
+    font-family: "Beaufort", sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+
+}
+
+/* Mô tả */
+.content-1 .champion-description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    word-break: break-word;
+    margin-bottom: 40px;
+    color: #e5e5e5;
+    max-width: 720px;
+}
+
+
+/* Khung Vai Trò / Độ Khó */
+/* Khung Vai Trò / Độ Khó */
+/* 1. TẠO VIỀN VÀNG VÀ KHOẢNG TRỐNG TRONG SUỐT */
+.stat-item-border {
+    /* Đặt kích thước, cộng thêm 12px margin mỗi bên */
+    width: 154px; /* 130px + 12px + 12px = 154px */
+    height: 154px; /* 130px + 12px + 12px = 154px */
+    box-sizing: border-box;
+    
+    /* TẠO VIỀN VÀNG: Độ dày 1px */
+    border: 1px solid #c09a5b;
+    
+    /* Đảm bảo flexbox vẫn căn chỉnh đúng (nếu cần) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. CHUYỂN .stat-item thành NỘI DUNG VÀ TẠO KHOẢNG TRỐNG TRONG SUỐT */
+.stat-item {
+    /* Đặt lại kích thước gốc cho nội dung */
+    width: 130px; 
+    height: 130px; 
+    box-sizing: border-box;
+    
+    /* BỎ VIỀN, CHỈ GIỮ MÀU NỀN */
+    background-color: #0c1420; 
+    border: none;
+    box-shadow: none;
+    
+
+    margin: 4px !important; /* Tạo khoảng trống 4px bên trong viền vàng */
+    
+    /* Định dạng flexbox nội dung */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+/* 3. Chỉnh lại .stats-container để sử dụng lớp bọc mới */
+.stats-container {
+    display: flex;
+    gap: 10px;
+    padding-top: 15px;
+    margin-top: 20px; 
+    max-width: fit-content;
+    /* Xóa style cũ của .stat-item nếu còn */
+}
+
+/* Định dạng cho vùng chứa chữ */
+.stat-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: auto; /* Đẩy khối chữ xuống dưới cùng */
+}
+
+/* Chỉnh màu chữ label */
+.stat-label {
+    font-size: 11px; /* Font nhỏ hơn một chút */
+    font-weight: 700;
+    color: #c4c4c4;
+    margin-bottom: 2px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Chỉnh màu chữ Tên/Giá trị */
+.stat-value {
+    font-family: 'Beaufort', sans-serif; /* Sử dụng font Beaufort cho giá trị */
+    font-size: 15px;
+    font-weight: 700;
+    color: #c09a5b; /* Màu vàng kim loại cho giá trị */
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/* --- ICON VAI TRÒ (ĐẤU SĨ) --- */
+
+.stat-icon {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* ĐIỀU CHỈNH CHÍNH: Đặt màu vàng cho SVG */
+    color: #c09a5b; 
+}
+
+/* Đảm bảo SVG Vai trò co giãn đúng kích thước */
+.stat-icon svg[width="32"] { 
+    width: 32px; 
+    height: 32px;
+}
+
+
+
+
+/* Container của Thanh Liên Kết Thống Kê (Bố cục MỘT DÒNG) */
+.champion-stats-links {
+    position: relative;
+    z-index: 2; 
+    
+    display: flex; /* Dùng Flexbox để xếp tất cả các mục ngang hàng */
+    align-items: center;
+    justify-content: flex-start;
+    
+    /* ĐIỀU CHỈNH CHÍNH: Đặt đường viền vàng mỏng phía trên */
+    border-top: 1px solid #c09a5b; 
+    
+    padding-top: 15px; /* Khoảng cách từ đường viền đến chữ */
+    margin-top: 160px; 
+    max-width: 800px; 
+}
+
+/* Định dạng cho chữ THÔNG THẠO TƯỚNG (THẺ P) */
+.champion-stats-links p {
+    font-family: 'Beaufort', sans-serif; 
+    font-size: 10px;
+    color: rgb(153,153,153);
+    font-weight: 700; 
+    text-transform: uppercase;
+    font-style: normal !important;
+    
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 20px; 
+}
+
+
+/* Định dạng cho các liên kết OP.GG, U.GG,... (THẺ A) */
+.champion-stats-links a {
+    font-family: 'Beaufort', sans-serif; 
+    font-size: 10px;
+    font-weight: 700;
+    margin-right: 20px; 
+    text-transform: uppercase;
+    
+    /* Màu chữ mờ */
+    color: rgb(255, 255, 255);
+    
+    text-decoration: none; 
+    cursor: pointer;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* HIỆU ỨNG HOVER chỉ dành cho thẻ a */
+.champion-stats-links a:hover {
+    color: #ffffff; /* Sáng hơn khi di chuột qua */
+    text-decoration: underline; 
+    text-underline-offset: 4px;
+}
+
+
+
+
+/* ================================================= */
+/* PHẦN KỸ NĂNG (ABILITIES) - ĐÃ CẬP NHẬT LẠI VỀ CHIỀU NGANG */
+/* ================================================= */
+
+/* Container chính cho phần KỸ NĂNG (Bố cục 2 cột) */
+.abilities-section {
+    display: flex;
+    justify-content: flex-start;
+    /* THAY ĐỔI: Dùng 'center' để căn giữa nội dung theo chiều dọc */
+    align-items: center; 
+    padding: 80px 80px 150px 80px;
+    margin-top: 0; 
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgb(10,20,40);
+    gap: 40px; /* Giảm khoảng cách giữa 2 cột (danh sách icon và video) */
+}
+
+/* Cột trái: Tiêu đề và Icons */
+.abilities-content {
+    width: 614px; /* (5 * 110px) + (4 * 16px) = 614px */
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Căn trái */
+    justify-content: flex-start;
+    padding-top: 0;
+}
+
+/* Tiêu đề KỸ NĂNG */
+.abilities-title {
+    font-family: 'Beaufort', sans-serif;
+    font-style: italic;
+    font-size: 50px; 
+    font-weight: 800;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center !important;
+    align-items: center;
+    width: 100%;
+}
+
+/* Danh sách Icons - PHẢI XẾP NGANG */
+.abilities-list {
+    display: flex;
+    flex-direction: row; /* Thay đổi: XẾP NGANG */
+    gap: 12px; /* Khoảng cách giữa các icons */
+    overflow-x: hidden; 
+    width: 614px;
+    height: 100%;
+    margin: 0 0 20px 0; /* Khoảng cách dưới cho thanh điều hướng */
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    overflow-y: hidden;
+}
+
+/* Khung bọc icon (Bỏ qua vì không cần thiết cho bố cục ngang) */
+.ability-icons-wrapper {
+    width: auto;
+}
+
+/* Mỗi Icon Kỹ năng (Container) */
+.ability-item {
+    display: flex;
+    flex-direction: column; /* Icon trên, tên dưới */
+    align-items: center;
+    width: 110px; /* Chiều rộng cố định cho mỗi item */
+    min-width: 110px;
+    max-width: 110px;
+    cursor: pointer;
+    background-color: transparent;
+    padding: 0; /* Bỏ padding cũ */
+    border: none;
+    opacity: 0.5; /* Làm mờ 50% */
+    transition: opacity 0.3s ease, color 0.3s ease; /* Thêm transition cho độ mờ */
+}
+.ability-item:not(.active):hover {
+    /* Đảm bảo background-color: transparent được áp dụng */
+    background-color: transparent;
+    
+    /* Phóng to toàn bộ item */
+    transform: scale(1.1); /* Phóng to 5% */
+    
+    /* Làm sáng item một chút khi hover */
+    opacity: 1; 
+    
+    /* Đảm bảo item nổi lên trên các item lân cận */
+    z-index: 10;
+}
+.ability-item:not(.active):hover p {
+    color: rgb(255, 255, 255); /* Màu chữ sáng hơn khi hover */
+}
+/* Active State (Viền vàng CHỈ bao quanh icon/ảnh) */
+.ability-item.active {
+    opacity: 1; /* Hiển thị rõ ràng */
+    border: none;
+    box-shadow: none; 
+    background-color: transparent;
+}
+
+/* Chữ P, Q, W, E, R (Key) - Ẩn đi theo mẫu mới */
+.ability-key {
+    display: none;
+}
+
+/* Icon (Ảnh kỹ năng) - Hình vuông, có viền active riêng */
+.ability-item img {
+    width: 100px; /* Kích thước Icon */
+    height: 100px; 
+    border: 1px solid transparent; /* Viền mặc định trong suốt */
+    box-shadow: none;
+    border-radius: 0;
+    object-fit: cover;
+    margin-bottom: 16px; /* Khoảng cách đến tên */
+}
+
+
+
+/* Tên kỹ năng */
+.ability-item p {
+    font-family: "Spiegel", sans-serif;
+    font-size: 14px; /* Kích thước nhỏ */
+    font-weight: 600; /* Chữ đậm */
+    text-align: center; /* Căn giữa */
+    color: rgb(130,135,146); /* Màu chữ xám */
+    text-transform: uppercase; /* In hoa */
+    line-height: 22px;
+    margin: 0;
+    margin-left: 0;
+    flex-grow: 0;
+    word-break: normal;
+}
+.ability-item.active p {
+    color: rgb(255, 255, 255); /* Tên vàng khi active */
+}
+
+
+/* Thanh chứa Viền Vàng và Nút (Khôi phục) */
+.ability-nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%; 
+    margin-top: 0;
+}
+
+/* 1. Thanh Phân Cách Dài (Container - Nền Xám Sáng) */
+.ability-nav-bar .divider {
+    width: 80%; 
+    /* Giữ nguyên độ dày nhỏ */
+    height: 3px; 
+    /* MÀU GỐC: Màu xám sáng ban đầu */
+    background-color: #AAAAAA; 
+    margin: 32px 0;
+    display: block; 
+    position: relative; 
+    overflow: hidden; 
+    /* THÊM SHADOW MỜ NHẸ CHO THANH NỀN */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); 
+    transition: box-shadow 0.8s ease-in-out;
+}
+
+/* 2. Lớp bên trong tạo hiệu ứng tô màu */
+.ability-nav-bar .divider .divider-fill {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Dùng 100% để scaleX có thể trượt hết */
+    width: 100%; 
+    /* Đảm bảo nó che phủ toàn bộ thanh nền */
+    height: 100%; 
+    
+    /* MÀU ĐEN khi được tô */
+    background-color: #171717; 
+    
+    /* Mặc định: Ẩn (tỷ lệ 0) */
+    transform: scaleX(0); 
+    
+    /* Xóa transform-origin ở đây, sẽ được set trong JS */
+    /* transform-origin: left;  */
+    
+    /* Hiệu ứng chuyển đổi mượt mà */
+    transition: transform 0.5s cubic-bezier(0.8, 0.0, 0.2, 1);
+}
+
+/* 3. CLASS MỚI: Trạng thái ĐÃ CUỘN/ĐÃ TÔ MÀU (scaleX = 1) */
+.ability-nav-bar .divider.scrolled-dark .divider-fill {
+    /* Mở rộng chiều rộng (tô màu) */
+    transform: scaleX(1); 
+}
+
+/* 2. Khối chứa Nút Điều Hướng */
+.ability-nav-bar .nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+/* 3. Định dạng Nút Điều Hướng */
+.ability-nav-btn {
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 700;
+    color: #555555; /* Mặc định: Màu xám tối */
+    user-select: none;
+    line-height: 0;
+    padding-bottom: 0;
+    display: inline-block; 
+    transition: color 0.3s ease;
+}
+
+/* Màu khi nút hoạt động (có thể click) - Màu vàng */
+.ability-nav-btn.active-scroll {
+    color: #c09a5b !important; /* Màu vàng kim loại */
+}
+
+/* Màu khi nút bị vô hiệu hóa (đã đạt giới hạn cuộn) */
+.ability-nav-btn.disabled {
+    color: #555555 !important; /* Màu xám tối */
+    cursor: not-allowed;
+}
+
+/* Cột phải: Chi tiết Kỹ Năng */
+.ability-details {
+    /* Đặt chiều rộng cố định cho phần chi tiết (ví dụ: 600px) để video/mô tả nằm bên phải */
+    flex-grow: 1;
+    padding-left: 0;
+    padding-top: 0;
+    
+    /* BỎ Placeholder cũ và set position: relative */
+    height: auto; 
+    background-color: transparent; 
+    border: none;
+    position: relative;
+    /* Đảm bảo chiều cao tối thiểu cho container chứa các nội dung tuyệt đối */
+    min-height: 500px; 
+}
+
+
+/* Ẩn placeholder cũ */
+.ability-details::before {
+    content: none;
+}
+
+/* KHỐI CHỨA NỘI DUNG CHI TIẾT CỦA MỖI KỸ NĂNG */
+.ability-detail-content {
+    display: none; /* Mặc định ẩn tất cả nội dung chi tiết */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.ability-detail-content.active {
+    display: block; /* Chỉ hiển thị nội dung chi tiết active */
+}
+
+
+/* KHỐI CHỨA MEDIA (VIDEO/GIF) - Nơi placeholder được đặt */
+.ability-media-placeholder {
+    /* Đảm bảo nó chiếm 100% chiều rộng của .ability-details */
+    width: 100%; 
+    
+    /* Thiết lập lại chiều cao linh hoạt, dựa vào padding-bottom để giữ tỷ lệ 16:9 */
+    height: 0;
+    padding-bottom: 56.25%; /* Tỷ lệ 16:9 (9/16 = 0.5625) */
+    
+    /* Đặt viền ngoài */
+    border: 1px solid #c09a5b; /* Viền vàng kim loại 1px */
+    
+    position: relative; /* Quan trọng cho việc đặt video tuyệt đối */
+    display: block; /* Chuyển thành khối */
+    margin-bottom: 30px; /* Giữ khoảng cách với mô tả */
+    
+    /* Xóa các thuộc tính căn chỉnh không cần thiết */
+    justify-content: none;
+    align-items: none;
+    color: none;
+    font-family: none;
+    font-size: none;
+    background-color: transparent; /* Loại bỏ nền cũ */
+}
+
+/* Thêm định dạng cho video bên trong lớp bọc */
+.ability-media-placeholder video {
+    /* Đặt video/gif chiếm toàn bộ lớp bọc, nhưng có padding/margin 12px */
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+    
+    /* Tính toán kích thước bên trong để tạo khoảng trống 12px */
+    width: calc(100% - 36px); /* 100% - (12px * 2) */
+    height: calc(100% - 36px); /* 100% - (12px * 2) */
+    
+    object-fit: cover;
+    
+    /* Thêm một nền đen cho khoảng cách 12px để viền nổi bật */
+    background-color: #000;
+}
+/* Điều chỉnh vị trí của phần mô tả để nằm dưới placeholder */
+.ability-description-wrapper {
+    /* Khối mới để chứa tên và mô tả */
+    width: 100%;
+    margin-top: 0; /* Đã được xử lý bởi margin-bottom của .ability-media-placeholder */
+}
+
+/* Tên kỹ năng chi tiết (Rất lớn, Màu vàng) */
+.ability-details .ability-name {
+    font-family: 'Beaufort', sans-serif;
+    font-size: 24px; /* Nhỏ hơn, khớp với mẫu */
+    font-weight: 800;
+    color: rgb(255, 255, 255); /* Màu trắng */
+    text-transform: uppercase;
+    margin-bottom: 5px; 
+    line-height: 1.1;
+    font-style: italic;
+    text-align: center;
+
+}
+
+/* Loại kỹ năng (Nội tại/Kích hoạt) (Nhỏ hơn, ngay dưới tên) */
+.ability-details .ability-type {
+    font-family: 'Beaufort', sans-serif;
+    height: 24px;
+    font-size: 16px; /* Nhỏ hơn nữa, khớp mẫu */
+    font-weight: 500; 
+    color: rgb(153,153,153); /* Màu xám nhạt */
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    margin-top: 24px; 
+    text-align: center;
+}
+
+/* Mô tả kỹ năng */
+.ability-details .champion-description { /* Đổi tên class để tránh nhầm lẫn với description ở banner trên */
+    font-family: "Neue Frutiger World", Tahoma, sans-serif;
+    font-size: 18px; /* Nhỏ hơn */
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin-top: 0;
+    text-align: center;
+}
+
+
+
+
+/* ================================================= */
+/* PHẦN TRANG PHỤC (SKINS SECTION) */
+/* ================================================= */
+
+.skins-section {
+    background-color: #ffffff; /* Nền trắng */
+    /* Điều chỉnh padding để không bị tràn lề */
+    padding: 0 80px 80px 80px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tiêu đề Trang Phục */
+.skins-title {
+    font-family: 'Beaufort', sans-serif;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 600;
+    color: #111111; /* Chữ tối màu */
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%; /* ĐỒNG BỘ: Chiều rộng mục tiêu */
+    text-align: left;
+    text-transform: uppercase;
+    /* Reset margin để căn lề trái title */
+    margin-left: 0; 
+    margin-right: 0; 
+}
+
+/* Ảnh Trang phục Lớn (Splash Art) */
+.main-splash-art {
+    /* ĐỒNG BỘ: Chiều rộng mục tiêu */
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.main-splash-art img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Container cho gallery và controls */
+.skin-gallery {
+    /* ĐỒNG BỘ: Chiều rộng mục tiêu */
+    width: 1198px; 
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+/* Khung chứa các Thumbnails (Chỉ hiển thị 5 items) */
+.skin-thumbnails-wrapper {
+    /* TÍNH TOÁN CHÍNH XÁC: 1166px */
+    width: 1206px; 
+    max-width: 100%;
+    height: 190px; 
+    overflow: hidden; 
+    margin-bottom: 15px;
+}
+
+/* Danh sách Thumbnails (Cuộn ngang) */
+.skin-thumbnails-list {
+    display: flex;
+    gap: 24px;
+    padding: 0; 
+    margin: 0; 
+    scroll-behavior: smooth;
+    overflow-x: auto; 
+    
+    /* ẨN THANH CUỘN */
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+.skin-thumbnails-list::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Mỗi Thumbnail Item */
+.skin-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Kích thước thumbnail mới */
+    min-width: 214px; 
+    max-width: 214px;
+    cursor: pointer;
+    /* ĐÃ FIX: Loại bỏ transform: scale(1.05) để tránh giật màn hình */
+    padding: 4px;
+}
+
+.skin-item.active {
+    opacity: 1;
+    /* Đã loại bỏ transform: scale để fix jittering */
+    transform: none; 
+    border: none;
+    box-shadow: none;
+    
+}
+
+
+/* Ảnh Thumbnail */
+.skin-item img {
+    width: 100%;
+    height: 120px; 
+    object-fit: cover;
+    border: none;
+    display: block;
+}
+
+
+/* Tên Trang phục */
+.skin-item p {
+    font-family: "Spiegel", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(153,153,153); 
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 24px 0 0 0; /* Thay vì 8px, dùng 12px để tăng khoảng cách */
+}
+
+
+
+.skin-item.active p {
+    color: #c09a5b; 
+}
+ 
+.skin-item.active img {
+    /* SỬA ĐỔI CHÍNH: Thay border: none thành viền vàng */
+    border: 3px solid #ffffff !important; /* Viền vàng kim loại 3px */
+    outline: 1px solid #c09a5b !important; /* Viền phụ 1px để viền vàng nổi bật hơn */
+    /* Đảm bảo hình ảnh không bị phóng to hay chuyển động */
+    transform: none;    
+}
+
+/* Thanh điều hướng */
+.skin-nav-bar {
+    /* ĐỒNG BỘ: Chiều rộng mục tiêu */
+    width: 1206px; 
+    max-width: 100%;
+    margin-top: 30px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+}
+
+/* 1. Thanh nền (Màu xám sáng) */
+.skin-divider {
+    flex-grow: 1; 
+    height: 3px; 
+    background-color: #D3D3D3; 
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 2. Thanh tiến trình (Màu vàng/đồng) */
+.skin-divider-fill {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgb(0, 0, 0); 
+    width: 0%; 
+    transition: width 0.5s ease; 
+}
+
+/* 3. Vị trí nút điều hướng */
+.skin-nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 0; 
+}
+
+/* 4. Định dạng Nút */
+.skin-nav-btn {
+    cursor: pointer;
+    font-size: 24px;
+    color: #999999; 
+    user-select: none;
+    line-height: 0;
+    transition: color 0.3s ease;
+}
+.skin-nav-btn.active {
+    color: #c09a5b; 
+}
+.skin-nav-btn.disabled {
+    color: #999999 !important;
+    cursor: not-allowed;
+}

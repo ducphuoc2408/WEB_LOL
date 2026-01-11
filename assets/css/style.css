@@ -1,0 +1,2320 @@
+        /* --- CSS Styling --- */
+       
+         /* Reset và Styles toàn cục */
+        :root {
+        --bg-color: #111111;
+        --text-primary: #f9f9f9;
+        --text-secondary: #c2c2c2;
+        --lol-gold: #c28f2c; /* Màu vàng kim loại đặc trưng */
+        --lol-gold-hover: #e3b154;
+        --riot-red: #d13639;
+        --btn-blue: #0ac8b9; /* Màu nút Chơi Ngay */
+        --btn-blue-hover: #0bc6e3;
+        --header-height: 80 px;
+        --font-main: 'Inter', sans-serif;
+        }   
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a {
+        text-decoration: none;
+        color: inherit;
+        transition: all 0.3s ease;
+        }
+        ul {
+        list-style: none;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+.site-container {
+    background-color: #0a1428; /* Dùng màu xanh đen đặc trưng của Riot thay vì ảnh */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+        /* .site-container {
+            background: url('/Trang chu/img/ahri.jpg') no-repeat center center/cover;
+            position: relative;
+            height: 100vh;
+            min-height: 100vh;
+            /* Cập nhật: Thêm flex-column để đẩy footer xuống */
+            /* display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Đảm bảo site-container chiếm ít nhất 100% chiều cao */
+        
+
+        /* Thêm: Wrapper cho nội dung chính để footer đẩy xuống */
+        .main-content-wrapper {
+            flex-grow: 1; 
+            /* Phần này sẽ tự động chiếm không gian còn lại, 
+               đẩy footer xuống dưới ngay cả khi nội dung ít */
+        }
+
+
+        /* --- Styling cho Header --- */
+        .main-header {
+            background-color: #111;
+            border-bottom: 1px solid #222;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1000;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+            max-width: 100%;
+            margin:10px -20px;
+            position: relative;
+        }
+
+         /* Phần bên trái của nav */
+        .nav-left {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+       
+        .riot-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-right: 20px;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .riot-logo-container > svg:first-of-type {
+            height: 30px;
+            width: auto;
+            fill: #fff;
+            transition: fill 0.2s ease;
+        }
+
+        .riot-logo-container:hover > svg:first-of-type {
+            fill:red;
+        }
+
+        .lol-logo-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            padding-left: 20px;
+            border-left: 1px solid #333;
+        }
+
+        .lol-logo-container a {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+       
+        .lol-logo-container svg {
+            width: 30px;
+            height: 32px;
+        }
+       
+        .primary-nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 25px;
+            margin-left: 30px;
+        }
+
+        .primary-nav-links > li > a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size:12px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.2s ease;
+            letter-spacing: 1px;
+        }
+       
+        .primary-nav-links > li > a:hover {
+            color: #fff;
+        }
+    /* --- Cập nhật HERO SECTION --- */
+.hero-section {
+    position: relative; /* Làm điểm tựa cho các phần tử con tuyệt đối */
+    height: 90vh; /* Tăng chiều cao lên chút cho hoành tráng */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Cắt bỏ phần video thừa ra ngoài khung */
+}
+
+/* Wrapper chứa video và lớp phủ */
+.hero-bg-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Nằm dưới cùng */
+}
+
+/* Style cho thẻ Video */
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* QUAN TRỌNG: Giúp video luôn full màn hình mà không bị méo */
+    object-position: center;
+}
+
+/* Lớp phủ tối màu (Backdrop Overlay) */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Tạo gradient từ dưới lên giống ảnh mẫu của bạn */
+    background: linear-gradient(to top, rgba(10, 20, 40, 1) 0%, rgba(10, 20, 40, 0.4) 50%, rgba(10, 20, 40, 0.1) 100%);
+    z-index: 1; /* Nằm đè lên video nhưng dưới nội dung */
+}
+
+/* Nội dung chính */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Nằm trên cùng */
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeInUp 1s ease-out; /* Thêm chút hiệu ứng xuất hiện */
+}
+
+.hero-sub-text {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-wrap: balance;
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.btn-play-hero {
+    display: inline-block;
+    padding: 18px 32px;
+    background-color: #C8AA6E; 
+    color: #070606;
+    font-size: 18px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    outline: 3px solid rgba(255, 255, 255, 0.3);
+    outline-offset: 3px;
+}
+
+.btn-play-hero:hover {
+    background-color: #d3bb8b; 
+    box-shadow: 0 0 15px rgba(194, 143, 44, 0.5);
+}
+
+/* --- NEWS SECTION STYLING --- */
+.news-section {
+    padding: 60px 20px;
+    background-color: #fcfcfc;
+    /* Tạo background pattern vân lưới mờ giống ảnh */
+    background-image: 
+        linear-gradient(#e5e5e5 0.4px, transparent 0.5px),
+        linear-gradient(90deg, #e5e5e5 0.4px, transparent 0.5px);
+    background-size: 10px 10px; /* Kích thước ô lưới */
+    background-position: center top;
+}
+
+.container {
+    max-width: 2000px; /* Độ rộng chuẩn của web hiện đại */
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #0a0a0a;
+    margin-bottom: 30px;
+    letter-spacing: 0.05em;
+    font-family: 'Inter', sans-serif; /* Đảm bảo dùng đúng font */
+}
+
+/* Grid Layout */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Chia 3 cột đều nhau */
+    gap: 24px;
+}
+
+/* Responsive: Trên mobile chuyển thành 1 cột */
+@media (max-width: 768px) {
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* News Card Styles */
+.news-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background: transparent; /* Card trong suốt để lộ nền web */
+    transition: transform 0.3s ease;
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Tỉ lệ khung hình 16:9 */
+    overflow: hidden;
+    margin-bottom: 16px;
+    background-color: #000; /* Nền đen lúc ảnh chưa load */
+}
+
+.card-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Hiệu ứng Zoom ảnh khi hover vào card */
+.news-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Icon nhỏ ở góc phải ảnh */
+.card-icon-overlay {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    background-color: rgba(17, 17, 17, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.2);
+    opacity: 1; /* Trong ảnh gốc icon luôn hiện */
+}
+
+.card-icon-overlay svg {
+    width: 16px;
+    height: 16px;
+    stroke: #fff;
+    fill: none;
+    stroke-width: 2;
+}
+
+/* Phần nội dung chữ */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.card-meta {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.meta-category {
+    color: #c28f2c; /* Màu vàng Gold đặc trưng */
+}
+
+.meta-separator {
+    color: #c4c4c4;
+    font-weight: 300;
+}
+
+.meta-date {
+    color: #7e7e7e; /* Màu xám cho ngày tháng */
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #0a0a0a;
+    line-height: 1.2;
+    margin: 0;
+    /* Giới hạn title 2 dòng nếu quá dài */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: color 0.2s ease;
+}
+
+/* Hover vào card thì title sáng màu lên một chút (nếu muốn) */
+.news-card:hover .card-title {
+    color: #333; 
+}
+
+.card-description {
+    font-size: 14px;
+    color: #555; /* Màu xám đậm cho mô tả */
+    line-height: 1.5;
+    margin: 0;
+    margin-top: 4px;
+    /* Giới hạn mô tả 3 dòng */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.champions-section {
+    position: relative;
+    padding: 80px 20px;
+    background-color: #fbfbfb; /* Nền trắng xám */
+    overflow: hidden;
+}
+
+/* Logo chìm làm nền */
+.champion-bg-watermark {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    /* Link logo chìm của Riot */
+    background: url('https://am-a.akamaihd.net/image?f=https://news-a.akamaihd.net/public/images/pages/2017/january/img/lol-logo.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.03; /* Rất mờ */
+    pointer-events: none;
+    z-index: 0;
+}
+
+.champion-container {
+    display: grid;
+    /* Chia cột: Chữ 40% - Ảnh 60% để ảnh tướng có không gian rộng rãi */
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    min-height: 600px;
+}
+
+/* --- CỘT TRÁI: NỘI DUNG & NÚT BẤM --- */
+.champion-content {
+    padding-right: 20px;
+    z-index: 10;
+    text-align: left;
+}
+
+.sub-title {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 22px;
+    color: rgb(10, 20, 40);
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.main-title {
+    text-wrap: balance;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 64px;
+    line-height: 72px;
+    color: rgb(10, 20, 40);
+    word-break: normal;
+    text-align: center;
+}
+
+.desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* Các nút bấm */
+.champion-actions {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 60px;
+    justify-content: center
+}
+
+.btn-gold {
+    background-color: #d0a85c;
+    color: #0a0a0a;
+    padding: 18px 32px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btn-gold:hover {
+    background-color: #bfa15f;
+}
+
+.btn-blue {
+    width: fit-content;
+    background-color: #59C1DE;
+    color: #0a0a0a;
+    padding: 18px 32px;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 2px;
+    transition: background 0.3s;
+    text-decoration: none;
+}
+
+.btn-blue:hover {
+    background-color: #0bdcd0;
+}
+
+/* --- THANH CHỌN ROLE (HỆ TƯỚNG) --- */
+.role-selector {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+    justify-content: center;
+}
+
+.role-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    opacity: 0.4; /* Mờ khi chưa chọn */
+    transition: all 0.3s ease;
+}
+
+.role-item:hover, .role-item.active {
+    opacity: 1; /* Sáng rõ khi active */
+    
+     /* (Mẹo) Chuyển icon sang màu đen đậm khi chọn */
+     /* filter: brightness(0); */
+}
+/* Nếu bạn muốn giữ màu gốc của ảnh thì xóa dòng filter bên trên đi */
+
+.role-icon {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.role-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Giữ ảnh không bị méo */
+    display: block;
+}
+
+.role-item span {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #0a0a0a;
+}
+
+/* --- CỘT PHẢI: HÌNH ẢNH (VISUAL) --- */
+/* Đã fix lỗi căn giữa */
+.champion-visual {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Khung chứa cố định để căn chỉnh vòng tròn và ảnh */
+.visual-inner {
+    position: relative;
+    width: 500px; 
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vòng tròn nền tĩnh */
+.circle-decoration {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+    z-index: 1;
+}
+
+/* Vòng tròn xoay animation */
+.rotating-ring {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    border: 1px dashed rgba(200, 170, 110, 0.5); /* Viền nét đứt màu vàng */
+    animation: spin 30s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Ảnh Tướng */
+.champion-img {
+    position: absolute;
+    z-index: 2;
+    height: 113%;
+    width: auto;
+    top: -7%;
+    left: -10%;
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.2));
+}
+
+/* Tên tướng và danh hiệu */
+.champion-name-tag {
+    position: absolute;
+    bottom: -20%;
+    right: 40%;
+    text-align: center;
+    z-index: 3;
+    font-family: "Beaufort for LOL", sans-serif;
+    color: #0a1428;
+}
+
+.champion-name-tag .name {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    color: #0a0a0a;
+}
+
+.champion-name-tag .role-name {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE: CHO ĐIỆN THOẠI --- */
+@media (max-width: 900px) {
+    .champion-container {
+        grid-template-columns: 1fr; /* Chuyển về 1 cột */
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .champion-content {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .role-selector {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+    
+    .champion-visual {
+        min-height: 400px;
+    }
+    
+    /* Thu nhỏ vòng tròn trên mobile */
+    .visual-inner {
+        width: 320px;
+        height: 320px;
+    }
+
+    .champion-name-tag {
+        right: 0; /* Căn lại tên tướng */
+    }
+}
+.read-more {
+    margin-top: auto; /* Đẩy chữ Read more xuống đáy card */
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: var(--btn-blue);
+}
+/* Keyframes cho hiệu ứng xuất hiện */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        /* Styling cho Dropdown */
+        .dropdown {
+            position: relative;
+        }
+       
+        .dropdown-arrow {
+            width: 8px;
+            height: 8px;
+            fill: currentColor;
+            transition: transform 0.2s ease;
+        }
+
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: -15px;
+            background-color: #292929;
+            min-width: 220px;
+            z-index: 1;
+            padding: 10px 0;
+            list-style: none;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content li a {
+            color: #c4c4c4;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            text-transform: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+       
+        .dropdown-content li a:hover {
+            background-color: #404040;
+            color: #fff;
+        }
+
+         /* Phần bên phải của nav */
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+       
+        .link-arrow {
+            width: 7px;
+            height: 7px;
+            fill: #737373;
+        }
+
+        .action-buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .icon-buttons {
+            display: flex;
+            align-items: center;
+            background-color: #292929;
+            border-radius: 20px;
+            padding: 5px;
+            transition: width 0.4s ease-in-out;
+            position: relative;
+        }
+
+        .icon-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #c4c4c4;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: color 0.2s ease;
+            z-index: 2; /* Để nút luôn bấm được */
+        }
+       
+        .icon-btn:hover {
+            color: #fff;
+        }
+
+        .icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
+
+        .play-now-btn {
+            background: linear-gradient(to right, #0acbe0, #00aaff);
+            color: #111;
+            padding: 10px 25px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: filter 0.2s ease;
+            cursor: pointer;
+        }
+
+        .play-now-btn:hover {
+            filter: brightness(1.1);
+        }
+
+         /* --- Styling và Animation cho thanh tìm kiếm --- */
+        .search-input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            padding: 0;
+            width: 0;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            position: absolute;
+            right: 45px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 14px;
+        }
+       
+        .main-nav.search-active .nav-left,
+        .main-nav.search-active .play-now-btn,
+        .main-nav.search-active .lang-btn {
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(20px);
+        }
+       
+        .main-nav.search-active .nav-right {
+            width: 100%;
+            justify-content: flex-end;
+        }
+
+        .main-nav.search-active .icon-buttons {
+            width: 300px;
+        }
+
+        .main-nav.search-active .search-input {
+            width: 240px;
+            padding: 0 10px;
+            opacity: 1;
+        }
+
+        /* =========================================
+   SKINS SECTION STYLING
+   ========================================= */
+
+.skins-section {
+    position: relative;
+    padding: 150px 20px;
+    /* Màu nền tối kết hợp ảnh nền rừng rậm (như ảnh mẫu) */
+    background: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/a6f94cd5ed222d3b99e535f17cd9592d3c716bb5-3840x1616.png?accountingTag=league_of_legends_website?auto=format&fit=fill&q=80&h=816') no-repeat center center;
+    background-size: cover;
+    color: #fff; /* Chữ màu trắng trên nền tối */
+    overflow: hidden;
+}
+
+/* Lớp phủ tối màu để chữ dễ đọc hơn trên nền ảnh */
+.skins-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(
+        90deg, 
+        rgba(10, 20, 40, 0.4) 0%,   /* Bên trái hơi tối */
+        rgba(10, 20, 40, 0.1) 40%,  /* Ở giữa (chỗ ảnh skin) rất trong để nhìn rõ nền */
+        rgba(10, 20, 40, 0.6) 100%  /* Bên phải tối hơn để chữ trắng dễ đọc */
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+.skins-container {
+    display: grid;
+    /* Chia cột: Ảnh 55% - Chữ 45% */
+    grid-template-columns: 55% 65%;
+    align-items: center;
+    position: relative;
+    z-index: 1; /* Nổi lên trên lớp phủ */
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 500px;
+}
+
+/* --- CỘT TRÁI: VISUAL --- */
+.skins-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 100%;
+}
+
+/* Ảnh Skin */
+.skin-img {
+    position: absolute;
+    z-index: 2;
+    /* Điều chỉnh kích thước và vị trí để nhân vật "tràn" ra khỏi khung */
+    width: 100%; 
+    height: auto;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%); /* Căn giữa */
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.5)); /* Bóng đổ đậm hơn vì nền tối */
+    transition: transform 0.5s ease;
+}
+
+
+
+/* --- CỘT PHẢI: CONTENT --- */
+.skins-content {
+    padding-left: 40px;
+    text-align: left;
+}
+
+.skins-content .sub-title {
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #fff; /* Subtitle màu trắng */
+    display: block;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: left;
+}
+
+
+.skins-content .main-title {
+    font-size: 70px;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #fff;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+.skins-content .desc {
+    font-size: 16px;
+    color: #f5f2f2;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 900px;
+    text-align: left;
+}
+
+.skins-content .btn-gold {
+    box-shadow: 0 4px 15px rgba(194, 143, 44, 0.3);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 900px) {
+    .skins-container {
+        grid-template-columns: 1fr; /* 1 Cột */
+        text-align: center;
+        gap: 50px;
+    }
+
+    .skins-content {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2; /* Đẩy chữ xuống dưới */
+    }
+    
+    .skins-visual {
+        order: 1; /* Đẩy ảnh lên trên */
+    }
+
+    .visual-inner-diamond {
+        width: 300px;
+        height: 300px;
+    }
+
+    .skins-content .main-title {
+        font-size: 50px;
+    }
+}
+
+/* =========================================
+   GAME MODES SECTION STYLING
+   ========================================= */
+
+.gamemodes-section {
+    position: relative;
+    padding: 100px 20px;
+    /* Ảnh nền mặc định (Summoner's Rift) */
+    background-image: url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/game_data/076da285eb0377c8e547348a478335f60b6e9273-5120x1600.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Transition background để khi đổi map nền chuyển mượt mà */
+    transition: background-image 0.5s ease-in-out; 
+    color: #fff;
+    min-height: 800px; /* Section này cần cao để chứa vòng tròn lớn */
+    overflow: hidden;
+}
+
+/* Overlay làm tối nền */
+.gamemodes-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Gradient tối dần về 2 bên để tôn video ở giữa và chữ bên trái */
+    background: radial-gradient(circle at center, rgba(10,20,40,0.2) 0%, rgba(10,20,40,0.8) 80%);
+    z-index: 0;
+}
+
+.gamemodes-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* --- CỘT TRÁI --- */
+.gamemodes-content {
+    padding-right: 40px;
+    text-align: center;
+}
+
+.gamemodes-content .sub-title {
+    font-family: Spiegel, sans-serif;
+    word-break: break-word;
+    font-size: 22px;
+    line-height: 32px;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    margin-bottom: 8px
+}
+
+.gamemodes-content .main-title {
+    font-size: 64px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    line-height: 72px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Grid các thumbnail map */
+.mode-selector {
+    display: flex;
+    gap: 60px;
+    margin-top: 60px;
+    justify-content: center;
+}
+
+.mode-item {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 80px;
+}
+
+.mode-item img {
+    width: 120px;
+    height: 120px;
+    
+    border: 2px solid transparent;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.mode-item span {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #c2c2c2;
+    line-height: 1.2;
+}
+
+/* Trạng thái Active hoặc Hover */
+.mode-item:hover, .mode-item.active {
+    opacity: 1;
+}
+
+.mode-item.active img {
+    border-color: #c28f2c; /* Viền vàng khi chọn */
+    box-shadow: 0 0 15px rgba(194, 143, 44, 0.5);
+    transform: scale(1.1);
+}
+
+.mode-item.active span {
+    color: #fff;
+}
+
+/* --- CỘT PHẢI (VIDEO TRÒN) --- */
+.gamemodes-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.video-circle-wrapper {
+    width: 600px;
+    height: 600px;
+    left: 15%;
+    border-radius: 50%; /* Biến div thành hình tròn */
+    position: relative;
+    overflow: hidden; /* Cắt video thừa ra ngoài hình tròn */
+    box-shadow: 0 0 50px rgba(0,0,0,0.5);
+    border: 4px solid rgba(194, 143, 44, 0.3); /* Viền mờ */
+}
+
+/* Video bên trong */
+.mode-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Video lấp đầy hình tròn */
+    transform: scale(1); /* Zoom nhẹ video để ko bị hở viền */
+}
+
+/* Viền vàng trang trí bao quanh (giống ảnh mẫu) */
+.circle-border {
+    position: absolute;
+    top: 10px; left: 10px; right: 10px; bottom: 10px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Phần mô tả dưới video */
+.mode-description {
+    text-align: center;
+    margin-top: 30px;
+    max-width: 500px;
+    animation: fadeInUp 0.5s ease;
+    position: relative;
+    left: 15%
+}
+
+.mode-description h3 {
+    font-size: 14px;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.mode-description p {
+    font-size: 14px;
+    color: #c2c2c2;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .gamemodes-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 50px;
+    }
+
+    .gamemodes-content {
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .video-circle-wrapper {
+        width: 300px;
+        height: 300px;
+    }
+}
+/* =========================================
+   FINAL CTA SECTION STYLING
+   ========================================= */
+
+.final-cta-section {
+    position: relative;
+    height: 600px; /* Chiều cao vừa phải, không cần full màn hình */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+}
+
+/* --- XỬ LÝ VIDEO NỀN --- */
+.cta-bg-wrapper {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.cta-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video lấp đầy khung */
+    object-position: center 20%; /* Căn chỉnh vị trí video để thấy rõ nhân vật hơn */
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Gradient tối ở dưới đáy và trên đỉnh, ở giữa sáng */
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.1) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 1;
+}
+
+/* --- XỬ LÝ NÚT BẤM TRUNG TÂM --- */
+.cta-content-centered {
+    position: relative;
+    z-index: 2; /* Nổi lên trên video */
+    text-align: center;
+}
+
+/* Style riêng cho nút ở phần này (To hơn, đậm hơn) */
+.btn-play-huge {
+    display: inline-block;
+    background-color: #C8AA6E; /* Màu vàng Gold */
+    color: #0a0a0a;
+    padding: 18px 32px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.btn-play-huge:hover {
+    background-color: #f5ca7a; /* Sáng hơn khi hover */
+    transform: translateY(-2px); /* Nổi lên nhẹ */
+}
+
+
+
+
+/* --- RIOT MEGA MENU (FIXED STYLE) --- */
+
+/* Overlay bao trùm toàn màn hình (Cố định) */
+.riot-mega-menu-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 2000;
+    display: none;
+}
+
+.riot-mega-menu-overlay.active {
+    display: block;
+}
+
+/* Lớp nền tối phía sau (Backdrop) */
+.riot-menu-backdrop {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+
+.riot-mega-menu-overlay.active .riot-menu-backdrop {
+    opacity: 1;
+}
+
+/* Container Menu Màu Trắng */
+.riot-mega-menu-container {
+    background-color: #fff;
+    width: 100%;
+    height: auto;
+    min-height: 50%;
+    position: relative;
+    z-index: 2001; /* Nổi lên trên backdrop */
+    padding: 30px 50px 60px 50px;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.riot-mega-menu-overlay.active .riot-mega-menu-container {
+    transform: translateY(0);
+}
+
+/* Header: Logo & Close Button */
+.riot-menu-header {
+    display: flex; /* Dùng Flexbox để căn chỉnh thay vì absolute */
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Tạo khoảng cách với nội dung bên dưới */
+    padding-bottom: 20px;
+}
+
+.riot-menu-logo svg {
+    fill: #000000;
+    height: 30px;
+    width: auto;
+    top: 45px;
+    left: 30px;
+    position: absolute;
+}
+
+.close-mega-menu {
+    background: #f5f5f5;
+    border: none;
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    font-size: 28px;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+.close-mega-menu:hover { background: #e0e0e0; }
+
+/* Body: Grid Layout */
+.riot-menu-body {
+    display: flex;
+    padding: 0px 0px;
+    flex-direction: row;
+    flex-basis: 100%;
+    width: 100%;
+    flex: 1;
+    gap: 16px;
+    max-width: 1920px;
+}
+
+/* Left Panel: 3 Cột Link */
+.menu-left-panel {
+    width: 50%;
+    columns: 10em 3;
+    column-gap: 10px;
+
+}
+
+.menu-group { margin-bottom: 30px;
+    break-inside: avoid;  /* ngắt hàng tránh chia nhóm link */
+}
+
+.menu-category-title {
+    background-color: #bababa1a;
+    border-radius: 6.4px;
+    width: 100%;
+    position: static;
+    height: 32px;
+    margin: 0px;
+    padding: 8px 12px 8px 16px;
+    font-size: 13px;
+    text-align: left;
+    font-weight: bold;
+    line-height: 120%;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: #0a0a0a;
+}
+
+.menu-list li a {
+    color: #4a4a4a;
+    font-size: 13px;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    line-height: 120%;
+}
+
+.menu-list li a:hover {
+    background-color: #ececec; 
+    color: #c8aa6e; 
+}
+
+/* Right Panel: Promo Card */
+.menu-right-panel {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 900px;
+}
+
+.promo-card {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+.promo-card img {
+    width: 100%;
+    height: 300px;
+    max-width: 960px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: opacity 0.2s;
+}
+
+.promo-text-wrapper p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+/* --- MENU RIGHT PANEL UPDATED --- */
+
+/* Style cho container mặc định (2 ảnh) */
+.promo-default-view {
+    width: 100%;
+    height: auto;
+    max-width: 700px;
+    transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: block;
+    gap: 16px;
+}
+
+.promo-card-small {
+    flex: 1; /* Chia đều 50-50 */
+    text-decoration: none;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-card-small .img-wrapper {
+    width: 100%;
+    height: auto;
+    max-width: 452px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    transition: all .3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: block; 
+}
+
+.promo-card-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover vào ảnh nhỏ thì zoom nhẹ */
+.promo-card-small:hover img {
+    transform: scale(1.05);
+}
+
+.promo-card-small p {
+    font-weight: 300;
+    color: #333;
+    text-transform: unset;
+    font-family: unset;
+    font-size: 13px;
+    line-height: 15.6px;
+    text-align: left;
+    color: #0a0a0a;
+    margin: 16px 0 0 0;
+    letter-spacing: .03em;
+    width: 100%;
+    position: static;
+    display: inline-block;
+}
+
+/* Style cho container hover (1 ảnh to) */
+.promo-hover-view {
+    width: 100%;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Animation mờ dần */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+        /* --- Thêm: Styling cho Play Now Modal --- */
+        .play-now-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1002;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .play-now-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .play-now-modal {
+            background-color: #0a1428;
+            padding: 40px 60px;
+            text-align: center;
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+       
+        .play-now-overlay.active .play-now-modal {
+            transform: scale(1);
+        }
+
+        .close-play-now-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #C8AA6E;
+            border: none;
+            color: #0a1428;
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 30px;
+   
+        }
+
+        .play-now-modal h2 {
+        text-wrap: balance;
+        word-break: break-word;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 120px;
+        text-transform: uppercase;
+        max-width: 784px;
+        color: rgb(255, 255, 255);
+        }
+
+        .play-now-body {
+            display: flex;
+            gap: 20px;
+            justify-content: space-evenly;
+        }
+
+        .play-now-column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .play-now-column p {
+            color: #c4c4c4;
+            font-size: 14px;
+        }
+
+        .btn-modal {
+            padding: 15px 40px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: filter 0.2s ease;
+        }
+
+        .btn-modal:hover {
+            filter: brightness(1.1);
+        }
+
+        .btn-create-account {
+            background-color: #0acbe0;
+            color: #111;
+        }
+       
+        .btn-login {
+            background-color: #C8AA6E;
+            color: #111;
+        }
+
+        /* --- BỔ SUNG: STYLING CHO FOOTER --- */
+        .main-footer-container {
+            background-color: #1a1a1a;
+            color: #a0a0a0;
+            text-align: center;
+            margin-top: auto; 
+        }
+        .footer-top-section {
+        user-select: none;
+        box-sizing: border-box;
+        font-family: "FF Mark W05", Arial, sans-serif;
+        background: #292929;
+        padding: 24px;
+        margin: 0;
+        color: #7e7e7e;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: .08em;
+        text-align: center;
+        text-transform: uppercase;
+        }
+        .footer-nav-top ul,
+        .footer-nav-bottom ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 30px;
+        }
+
+        .footer-nav-top ul li a,
+        .footer-nav-bottom ul li a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.2s ease;
+            display: block;
+        }
+
+        .footer-nav-top ul li a:hover,
+        .footer-nav-bottom ul li a:hover {
+            color: #c4c4c4;
+        }
+
+        .footer-social-links {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .footer-social-links a {
+            color: #888;
+            transition: color 0.2s ease;
+        }
+
+        .footer-social-links a:hover {
+            color: #fff;
+        }
+
+        .footer-social-links svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .footer-logos {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+            gap: 20px;
+        }
+
+        .footer-logos .riot-logo-footer svg {
+            height: 30px;
+            width: auto;
+            fill: #777;
+        }
+
+        .footer-logos .vng-logo-footer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #777;
+            letter-spacing: -1px;
+            font-style: italic;
+            /* Placeholder đơn giản cho logo VNG Games */
+            font-family: 'Inter', sans-serif; 
+        }
+
+        .footer-copyright {
+            font-size: 12px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            line-height: 1.6;
+            color: #777;
+        }
+
+        .footer-nav-bottom {
+            margin-bottom: 30px;
+        }
+
+        .footer-age-rating {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border: 2px solid #555;
+            background-color: #000;
+            padding: 15px 20px;
+            width: 280px;
+            border-radius: 4px;
+        }
+
+        .age-rating-18 {
+            font-size: 60px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            border-right: 2px solid #555;
+            padding-right: 15px;
+            margin-right: 15px;
+        }
+
+        .age-rating-text {
+            font-size: 13px;
+            color: #fff;
+            text-align: left;
+            line-height: 1.5;
+        }   
+
+
+    
+/* --- RIOT MOBILE MENU STYLING --- */
+/* 1. Nút Hamburger (Mặc định ẩn trên PC) */
+.hamburger-btn {
+    display: none; /* Ẩn trên PC */
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hamburger-btn svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* =========================================
+   MOBILE MENU FULL SCREEN (UPDATED)
+   ========================================= */
+
+/* --- 1. Overlay & Container (Sidebar Mode) --- */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0; left: 0; 
+    width: 100%; height: 100%;
+    z-index: 3000;
+    background-color: rgba(0, 0, 0, 0.6); /* Nền tối mờ */
+    
+    /* QUAN TRỌNG: Flexbox để đẩy menu sang phải */
+    display: flex;
+    justify-content: flex-end; /* Căn phải */
+    align-items: stretch;      /* Kéo dãn chiều cao */
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+/* --- CSS CHO NÚT CHƠI NGAY TRONG MENU MOBILE --- */
+.mobile-cta-wrapper {
+    margin-top: auto; /* Đẩy nút xuống đáy menu */
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.btn-play-mobile-large {
+    display: block;
+    width: 100%;
+    background: linear-gradient(315deg, rgb(11, 196, 226) 0%, rgb(44, 140, 194) 100%);
+    color: #111;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 8px 16px;
+    height: 48px;
+    border-radius: 12px;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: background 0.3s ease;
+    line-height: 120%;
+    text-overflow: ellipsis;
+}
+
+.btn-play-mobile-large:hover {
+    background-color: #0bdcd0; /* Sáng hơn khi hover */
+}
+/* Container Menu: Giới hạn chiều rộng để tạo thành thanh Sidebar */
+.mobile-menu-container {
+    background-color: #111;
+    width: 100%;
+    max-width: 400px; /* Tablet/Laptop chỉ rộng 400px */
+    height: 100%;     /* Full chiều cao màn hình */
+    padding: 20px 24px;
+    margin: 0;        /* Xóa margin: 0 auto cũ để không bị căn giữa */
+    display: flex;
+    flex-direction: column; /* Xếp dọc nội dung */
+    overflow-y: auto;       /* Cho phép cuộn nếu menu dài */
+
+    /* Hiệu ứng trượt từ phải sang */
+    transform: translateX(100%); 
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: -5px 0 20px rgba(0,0,0,0.5); /* Bóng đổ ngăn cách với web */
+}
+
+/* Khi active thì trượt vào khớp vị trí (0) */
+.mobile-menu-overlay.active .mobile-menu-container {
+    transform: translateX(0);
+}
+/* 2. Header (Logo & Close) */
+.mobile-menu-container {
+    padding: 20px 24px;
+    max-width: 600px; /* Giới hạn độ rộng trên tablet cho đẹp */
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.mobile-logo svg {
+    height: 60px;
+    width: auto;
+}
+.close-mobile-menu {
+    background: #292929; /* Nền xám tròn */
+    border: none;
+    width: 40px; height: 40px;
+    border-radius: 50%; /* Hình tròn */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.close-mobile-menu svg {
+    width: 24px; height: 24px;
+}
+
+/* 3. Search Bar (Giống ảnh mẫu) */
+.mobile-search-wrapper {
+    margin-bottom: 30px;
+}
+
+.mobile-search-box {
+    background-color: #292929;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.mobile-search-box .search-icon {
+    width: 20px; height: 20px;
+    margin-right: 10px;
+    stroke: #888;
+}
+
+.mobile-search-box input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    width: 100%;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.mobile-search-box .clear-search {
+    background: none; border: none;
+    color: #888; font-size: 20px;
+    cursor: pointer;
+}
+
+/* 4. Main Menu List (Typography lớn) */
+.mobile-nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Khoảng cách giữa các mục */
+}
+
+.nav-item-large, .mobile-submenu li a {
+    display: block;
+    color: #fff;
+    font-size: 18px; /* Chữ to */
+    font-weight: 800; /* In đậm */
+    text-transform: uppercase;
+    padding: 15px 0;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+}
+
+.nav-item-large:hover {
+    color: #C28F2C;
+}
+
+/* External Link Arrow */
+.arrow-diag {
+    font-size: 14px;
+    vertical-align: top;
+    margin-left: 5px;
+    color: #888;
+}
+
+/* 5. Dropdown Animation Logic */
+.mobile-dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+}
+
+/* Arrow rotation */
+.dropdown-arrow-icon {
+    width: 20px; height: 20px;
+    stroke: #888;
+    transition: transform 0.3s ease;
+}
+
+/* Khi có class 'open' thì xoay mũi tên */
+.mobile-dropdown.open .dropdown-arrow-icon {
+    transform: rotate(180deg);
+}
+
+/* Submenu: Animation chiều cao */
+.mobile-submenu {
+    list-style: none;
+    padding-left: 15px;
+    overflow: hidden;
+    max-height: 0; /* Mặc định ẩn */
+    transition: max-height 0.4s ease-in-out; /* Hiệu ứng trượt */
+}
+
+/* Khi mở thì set chiều cao lớn để hiện nội dung */
+.mobile-dropdown.open .mobile-submenu {
+    max-height: 500px; /* Đủ lớn để chứa hết item con */
+    margin-bottom: 15px;
+}
+
+.mobile-submenu li a:hover {
+    color: #C28F2C;
+}
+
+/* =========================================
+   RESPONSIVE (MOBILE & TABLET)
+   ========================================= */
+
+/* --- 1. TABLET & MÀN HÌNH NHỎ (Laptop nhỏ, iPad dọc) --- 
+   Kích thước dưới 1024px */
+@media (max-width: 1024px) {
+ /* Ẩn menu ngang chính */
+    .primary-nav-links {
+        display: none !important; 
+    }
+    
+    /* Ẩn thanh search và các nút icon để gọn gàng */
+    .search-input, 
+    .icon-buttons,
+    .play-now-btn { /* Ẩn nút Chơi Ngay trên header vì đã có trong menu hamburger */
+        display: none !important;
+    }
+
+    /* Hiện nút Hamburger */
+    .hamburger-btn {
+        display: block !important;
+        margin-left: auto; /* Đẩy nút sang phải cùng */
+    }
+    
+    /* Canh chỉnh lại Header */
+    .nav-right {
+        margin-left: auto; /* Đẩy toàn bộ cụm phải sang sát lề */
+    }
+ 
+    /* Header: Thu gọn padding */
+    .main-nav {
+        padding: 0 10px;
+    }
+
+    /* Champions: Thu nhỏ ảnh và chữ */
+    .main-title {
+        font-size: 72px;
+        line-height: 1;
+    }
+    
+    .champion-container {
+        grid-template-columns: 1fr; /* Chuyển thành 1 cột */
+        text-align: center;
+        gap: 50px;
+    }
+
+    .champion-content {
+        padding-right: 0;
+        order: 1; /* Đưa nội dung lên trước */
+    }
+
+    .champion-visual {
+        order: 2; /* Ảnh xuống sau */
+        min-height: 400px;
+    }
+    
+    .visual-inner {
+        width: 100%;
+        height: auto;
+    }
+
+    .champion-img {
+        /* Reset vị trí ảnh tướng để không bị lệch */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: auto;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    .champion-name-tag {
+        right: 0;
+        left: 0;
+        bottom: -10%;
+    }
+
+    /* Game Modes: Thu nhỏ vòng tròn video */
+    .video-circle-wrapper {
+        width: 400px;
+        height: 400px;
+        left: 0; /* Bỏ lệch trái */
+    }
+    .hamburger-btn {
+        display: block; /* Hiện nút 3 gạch */
+    }
+
+    .primary-nav-links {
+        display: none; /* Ẩn menu ngang cũ */
+    }
+}
+
+/* --- 2. MOBILE (Điện thoại) --- 
+   Kích thước dưới 768px */
+@media (max-width: 768px) {
+
+    /* --- Header & Nav --- */
+    .primary-nav-links {
+        display: none; /* Ẩn menu ngang cũ */
+    }
+    .hamburger-btn {
+        display: block; /* Hiện nút 3 gạch */
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+    
+    .search-input {
+        display: none; /* Ẩn tìm kiếm trên mobile cho gọn */
+    }
+    
+    .icon-buttons {
+        display: none; /* Ẩn nút icon phụ */
+    }
+
+    .play-now-btn {
+        display: none; /* Ẩn nút Play Now trên mobile */
+    }
+
+    /* --- Hero Section --- */
+    .hero-content {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .hero-logo-text {
+        width: 60%; /* Logo nhỏ lại */
+    }
+
+    .hero-sub-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 30px;
+    }
+
+    .btn-play-hero {
+        padding: 12px 24px;
+        font-size: 14px;
+        width: 100%;
+        line-height: 48px;
+    }
+
+    /* --- News Section --- */
+    .news-grid {
+        grid-template-columns: 1fr; /* 1 cột tin tức */
+    }
+
+    /* --- Champions Section --- */
+    .champions-section {
+        padding: 40px 15px;
+    }
+    .champion-actions {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    margin-top: 24px;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    }
+    .champion-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sub-title {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .main-title {
+        font-size: 48px; /* Giảm cỡ chữ tiêu đề lớn */
+        line-height: 56px;
+    }
+
+    .role-selector {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap; /* Cho phép icon xuống dòng nếu quá chật */
+        padding: 0% 15% 0% 15%;
+    }
+    
+    .role-icon {
+        width: auto;
+        height: auto;
+    }
+    
+    .role-item span {
+        font-size: 18px;
+    }
+
+    /* Chỉnh ảnh Akali trên mobile */
+    .champion-visual {
+        margin-top: 30px;
+        overflow: visible; /* Cho phép ảnh tràn nhẹ */
+        min-height: 350px;
+    }
+
+    .visual-inner {
+        width: 300px;
+        height: 400px;
+    }
+
+    .champion-img {
+        width: 113%;
+        max-width: none;
+        top: -7%;
+        left: -10%;
+
+    }
+
+    .champion-name-tag {
+        bottom: 0%;
+    }
+
+    /* --- Skins Section --- */
+    .skins-section {
+        padding: 25% 20px 50%; /* Tăng padding trên để tránh ảnh skin bị che khuất */
+    }
+
+    .skins-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .skins-content {
+        order: 0; 
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+        padding-bottom: 20%;
+    }
+    .skins-visual {
+        order: 1;  
+    }    
+    .skins-content .main-title,
+    .skins-content .sub-title,
+    .skins-content .desc {
+        text-align: center;
+    }
+
+    .skin-img {
+        left: 50%; /* Căn giữa lại ảnh skin */
+        width: 100%;
+    }
+    .btn-gold{
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+    }
+    .btn-blue {
+        width: 100%;
+        line-height: 48px;
+        font-size: 14px;
+    }
+    /* --- Game Modes Section --- */
+    .gamemodes-section {
+        padding: 60px 20px;
+        min-height: auto;
+    }
+
+    .gamemodes-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .gamemodes-content {
+        padding-right: 0;
+    }
+
+    .mode-selector {
+        gap: 30%;
+    }
+
+    .mode-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Vòng tròn video trên mobile */
+    .video-circle-wrapper {
+        width: 320px; /* Thu nhỏ cho vừa màn hình điện thoại */
+        height: 320px;
+        border-width: 2px;
+    }
+
+    .mode-description {
+        left: 0; /* Bỏ lệch trái */
+        padding: 0 10px;
+    }
+
+    /* --- Final CTA --- */
+    .final-cta-section {
+        height: 400px;
+    }
+    
+    .btn-play-huge {
+        padding: 15px 30px;
+        font-size: 14px;
+    }
+    /* --- Footer --- */
+    .footer-logos {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .footer-nav-top ul, .footer-nav-bottom ul {
+        flex-direction: column; /* Menu footer xếp dọc */
+        gap: 15px;
+    }
+
+    /* --- Mega Menu (Riot Bar) Fix --- */
+    .riot-mega-menu-container {
+        padding: 20px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .riot-menu-header {
+        margin-bottom: 20px;
+    }
+
+    .riot-menu-body {
+        flex-direction: column; /* Xếp dọc 2 cột menu */
+    }
+
+    .menu-left-panel {
+        width: 100%;
+        columns: 1; /* Link xếp thành 1 cột dọc */
+    }
+
+    .menu-right-panel {
+        display: none; /* Ẩn phần quảng cáo bên phải trên mobile cho gọn */
+    }
+
+    .mobile-menu-container {
+        max-width: 100%; 
+    }
+
+}
